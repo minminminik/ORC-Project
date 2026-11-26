@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* ==========================================================================
+   홈 (index.html) 전용 스타일
+   ========================================================================== */
+
+/* ---------- 1. 히어로 ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--jade-dark);
+  color: rgba(255, 255, 255, 0.82);
+}
+/* 슬라이드별 배경 (서로 겹쳐서 페이드) */
+.hero__bg { position: absolute; inset: 0; opacity: 0; transition: opacity 1.2s var(--ease); }
+.hero__bg.is-active { opacity: 1; }
+.hero__bg--ai {
+  background:
+    radial-gradient(640px 480px at 76% 48%, rgba(30, 181, 188, 0.42), transparent 62%),
+    radial-gradient(500px 400px at 10% 100%, rgba(0, 98, 111, 0.6), transparent 70%),
+    linear-gradient(135deg, #00353D 0%, #001F24 100%);
+}
+.hero__bg--pkg {
+  background:
+    radial-gradient(900px 500px at 85% 20%, rgba(30, 181, 188, 0.35), transparent 60%),
+    linear-gradient(135deg, var(--jade) 0%, var(--jade-dark) 70%);
+}
+.hero::before { /* 은은한 회로 그리드 */
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 60%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 60%);
+  pointer-events: none;
+}
+.hero__inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1.05fr 1fr; align-items: center;
+  gap: clamp(32px, 5vw, 72px);
+  min-height: min(760px, calc(100vh - var(--header-h)));
+  padding-top: clamp(56px, 8vw, 96px);
+  padding-bottom: clamp(56px, 8vw, 96px);
+}
+.hero .eyebrow { /* 대문은 기존 작은 영문 라벨 유지 */
+  display: inline-block; margin-bottom: 12px; font-size: var(--fs-small); font-weight: 700; line-height: 1.7;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--mint);
+}
+.hero__title { color: #fff; font-size: var(--fs-display); line-height: 1.25; }
+.hero__title em { font-style: normal; color: var(--mint); }
+/* 영문: 단어가 길어 한 단계 작게 */
+html[lang="en"] .hero__title { font-size: clamp(1.625rem, 1.15rem + 1.9vw, 2.625rem); }
+.hero__sep { font-weight: 300; color: rgba(255, 255, 255, 0.35); }
+.hero__desc { margin-top: 20px; max-width: 540px; font-size: var(--fs-lead); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.hero__apps { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.15); max-width: 540px; }
+.hero__apps-label { font-size: var(--fs-small); color: rgba(255, 255, 255, 0.75); margin-bottom: 10px; }
+.hero__apps ul { display: flex; flex-wrap: wrap; gap: 8px; }
+.hero__apps li {
+  padding: 4px 12px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px;
+  font-size: var(--fs-small); color: rgba(255, 255, 255, 0.9);
+}
+.hero__visual { position: relative; }
+.hero__visual svg { width: 100%; height: auto; overflow: visible; }
+
+/* ----- 슬라이드: 문구·그림을 같은 칸에 겹쳐 두고 페이드 전환 ----- */
+.hero__copies, .hero__visuals { display: grid; }
+.hero__copy, .hero__visual { grid-area: 1 / 1; }
+.hero__copy { align-self: end; } /* 제목 줄 수가 달라도 버튼과의 간격 동일 */
+@media (max-width: 768px) { .hero__title .br-pc { display: none; } } /* 모바일은 2줄 */
+.hero__copy, .hero__visual {
+  opacity: 0; visibility: hidden;
+  transition: opacity .9s var(--ease), transform .9s var(--ease), visibility 0s linear .9s;
+}
+.hero__copy { transform: translateY(14px); }
+.hero__visual { transform: scale(.97); }
+.hero__copy.is-active, .hero__visual.is-active {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity .9s var(--ease) .15s, transform .9s var(--ease) .15s, visibility 0s;
+}
+.hero__visual-caption { margin-top: 10px; text-align: center; font-size: var(--fs-small); color: rgba(255, 255, 255, 0.75); }
+
+/* 슬라이드 컨트롤 */
+.hero__controls { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+.hero__dots { display: flex; gap: 8px; }
+.hero__dot {
+  position: relative; width: 44px; height: 32px; /* 터치 영역 */
+}
+.hero__dot::before, .hero__dot span {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 3px;
+}
+.hero__dot::before { background: rgba(255, 255, 255, 0.25); }
+.hero__dot span { background: var(--mint); transform: scaleX(0); transform-origin: left; }
+.hero__dot[aria-current="true"] span { animation: heroProgress var(--hero-interval, 6s) linear forwards; }
+.hero.is-paused .hero__dot[aria-current="true"] span { animation-play-state: paused; }
+@keyframes heroProgress { to { transform: scaleX(1); } }
+.hero__count { font-size: var(--fs-small); font-variant-numeric: tabular-nums; color: rgba(255, 255, 255, 0.8); }
+.hero__count b { color: #fff; font-weight: 700; }
+.hero__pause {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.3); color: #fff;
+}
+.hero__pause:hover { background: rgba(255, 255, 255, 0.12); }
+.hero__pause svg { width: 14px; height: 14px; }
+.hero__pause .i-play { display: none; }
+.hero.is-paused .hero__pause .i-play { display: block; }
+.hero.is-paused .hero__pause .i-pause { display: none; }
+
+/* 첫 등장 애니메이션 */
+.hero__text, .hero__visuals { animation: heroIn .8s var(--ease) both; }
+.hero__visuals { animation-delay: .2s; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+/* ----- AI 반도체 · PCB 회로 그래픽 ----- */
+.ai-board { stroke: rgba(255, 255, 255, 0.12); }
+.ai-traces { fill: none; stroke: rgba(255, 255, 255, 0.2); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.ai-pulses { fill: none; stroke: #7FEFF3; stroke-width: 3; stroke-linecap: round; }
+.trace-pulse {
+  stroke-dasharray: 10 100; stroke-dashoffset: 110;
+  animation: traceFlow 3.2s linear infinite;
+  filter: drop-shadow(0 0 4px rgba(30, 181, 188, 0.9));
+}
+@keyframes traceFlow { to { stroke-dashoffset: 0; } }
+.ai-vias { fill: #06343A; stroke: var(--mint); stroke-width: 1.5; }
+.ai-pins { fill: var(--mint); }
+.ai-glow { animation: aiGlow 4s ease-in-out infinite alternate; }
+@keyframes aiGlow { from { opacity: .35; } to { opacity: .75; } }
+.ai-hbm { fill: rgba(255, 255, 255, 0.1); stroke: rgba(255, 255, 255, 0.5); }
+.ai-hbm-line { stroke: rgba(255, 255, 255, 0.28); }
+.ai-grid { stroke: rgba(255, 255, 255, 0.2); }
+.ai-label { font: 800 30px var(--font); fill: #fff; letter-spacing: 0.02em; }
+.ai-sub { font: 600 9px var(--font); fill: rgba(255, 255, 255, 0.65); letter-spacing: 0.12em; }
+
+/* SVG 내부 */
+.pkg-label { font: 600 13px var(--font); fill: #fff; }
+.pkg-label--sub { font-weight: 500; font-size: 11px; fill: rgba(255, 255, 255, 0.6); }
+.pkg-lead { stroke: rgba(255, 255, 255, 0.45); stroke-width: 1; fill: none; stroke-dasharray: 3 3; }
+.pkg-dot { fill: var(--mint); }
+.pkg-pulse { fill: var(--mint); opacity: .35; transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .45; } 100% { transform: scale(3); opacity: 0; } }
+.pkg-markers .pkg-pulse { animation-name: pulseRing; }
+@keyframes pulseRing { 0% { transform: scale(1); opacity: .5; } 100% { transform: scale(2.2); opacity: 0; } }
+.pkg-marker circle { fill: #00434C; stroke: #7FEFF3; stroke-width: 2; }
+.pkg-marker text { font: 700 11px var(--font); fill: #fff; text-anchor: middle; }
+
+/* 슬라이드 2 범례 */
+.hero__legend-title { margin-top: 14px; text-align: center; font-size: 0.8125rem; font-weight: 600; color: rgba(255, 255, 255, 0.8); }
+.hero__legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-top: 8px; font-size: 0.8125rem; color: rgba(255, 255, 255, 0.85); }
+.hero__legend li { display: inline-flex; align-items: center; gap: 6px; }
+.hero__legend b {
+  display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%;
+  border: 1.5px solid #7FEFF3; background: #00434C; color: #fff; font-size: 0.6875rem;
+}
+
+@media (max-width: 1024px) {
+  .hero__inner { grid-template-columns: 1fr; min-height: 0; }
+  .hero__visuals { max-width: 560px; width: 100%; margin: 0 auto; }
+}
+@media (max-width: 768px) {
+  .hero__title { font-size: clamp(1.625rem, 7.4vw, 2rem); }
+  .hero__actions .btn { flex: 1 1 auto; }
+  /* 일러스트가 축소되므로 라벨 확대 */
+  .pkg-label { font-size: 16px; }
+  .pkg-marker text { font-size: 13px; }
+}
+
+/* ---------- 2. 주력 제품 ---------- */
+.product-card {
+  display: flex; flex-direction: column; height: 100%;
+  position: relative; overflow: hidden;
+}
+.product-card::before { /* 상단 컬러 바 */
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px;
+  background: linear-gradient(90deg, var(--mint), var(--jade));
+}
+.product-card__num { font-size: var(--fs-small); font-weight: 700; color: var(--mint-dark); letter-spacing: 0.08em; }
+.product-card__en { margin-top: 20px; font-size: var(--fs-small); font-weight: 600; color: var(--muted); }
+.product-card__title { margin-top: 4px; font-size: var(--fs-h3); }
+.product-card__series { margin-top: 12px; font-weight: 600; color: var(--jade); }
+.product-card__codes { margin-top: 4px; font-size: var(--fs-small); color: var(--muted); }
+.product-card__codes span { white-space: nowrap; }
+.product-card__codes span:not(:last-child)::after { content: "·"; margin: 0 6px; }
+
+/* 태블릿 2열일 때 3번째 카드는 가로 전체 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+.tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+.tag-list li {
+  padding: 2px 10px; border-radius: 4px;
+  background: var(--mint-light); color: var(--jade);
+  font-size: 0.8125rem; font-weight: 600;
+}
+
+.product-card .check-list { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+
+.more-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: auto; padding-top: 28px;
+  font-weight: 600; color: var(--jade);
+}
+.more-link svg { width: 18px; height: 18px; transition: transform .2s var(--ease); }
+a.card:hover .more-link svg { transform: translateX(4px); }
+
+.product-etc {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+  margin-top: clamp(24px, 3vw, 32px); padding: 20px 28px;
+  border-radius: var(--radius); background: var(--bg-soft);
+}
+.product-etc p { color: var(--muted); }
+.product-etc strong { color: var(--ink); }
+
+/* ---------- 3. 기술 강점 ---------- */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  margin-bottom: clamp(32px, 5vw, 56px);
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+}
+.stat { padding: clamp(24px, 3vw, 36px) 20px; text-align: center; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.stat__value { font-size: clamp(1.5rem, 1.25rem + 0.9vw, 2rem); font-weight: 800; line-height: 1.1; color: var(--jade); letter-spacing: -0.03em; }
+.stat__value small { font-size: 0.45em; font-weight: 700; margin-left: 2px; }
+.stat__label { margin-top: 8px; font-size: var(--fs-small); color: var(--muted); }
+
+.strength { display: flex; gap: 20px; }
+.strength__icon {
+  flex-shrink: 0; width: 56px; height: 56px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--jade-light); color: var(--jade);
+}
+.strength__icon svg { width: 28px; height: 28px; }
+.strength h3 { font-size: 1.25rem; }
+.strength p { margin-top: 8px; color: var(--muted); }
+.chip-flow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 14px; }
+.chip-flow span {
+  padding: 2px 10px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 0.8125rem; font-weight: 600; color: var(--text); background: #fff;
+}
+.chip-flow i { font-style: normal; color: var(--mint); font-size: 0.75rem; }
+
+@media (max-width: 1024px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(3) { border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 768px) {
+  .strength { flex-direction: column; gap: 16px; }
+}
+
+/* ---------- 4. 문의 유도 ---------- */
+.cta {
+  position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 32px;
+  padding: clamp(40px, 6vw, 72px);
+  border-radius: calc(var(--radius) * 2);
+  background: linear-gradient(135deg, var(--mint) 0%, var(--mint-dark) 100%);
+  color: rgba(255, 255, 255, 0.92);
+}
+.cta h2 { color: #fff; font-size: clamp(1.375rem, 1.15rem + 0.9vw, 1.875rem); }
+.cta p { margin-top: 10px; font-size: 1rem; }
+.cta__actions { display: flex; flex-direction: column; gap: 12px; min-width: 240px; }
+/* 민트 박스 위 흰색 버튼 */
+.cta .btn--primary { background: #fff; color: var(--jade); }
+.cta .btn--primary:hover { background: var(--jade); color: #fff; }
+.cta__tel { display: block; text-align: center; font-size: var(--fs-small); color: rgba(255, 255, 255, 0.85); }
+.cta__tel a { font-size: 1.125rem; font-weight: 700; color: #fff; }
+
+@media (max-width: 768px) {
+  .cta { grid-template-columns: 1fr; }
+  .cta__actions { min-width: 0; }
+}

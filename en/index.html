@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ORCHEM | Chemical Materials for PCB & Semiconductor Packaging</title>
+  <meta name="description" content="ORCHEM develops and supplies key chemical materials for the electrical and electronics industry, including electroless copper plating, electrolytic copper plating and DFR strippers for PCB and semiconductor package processes.">
+  <meta name="theme-color" content="#00626F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ORCHEM | Chemical Materials for PCB & Semiconductor Packaging">
+  <meta property="og:description" content="Optimal Reaction through Chemistry — We develop and supply key chemical materials for the electrical and electronics industry.">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+<body data-base="../">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="ORCHEM Home">
+        <img src="../assets/images/logo-color.png" alt="ORCHEM" width="146" height="30">
+      </a>
+
+      <nav class="gnb" id="gnb" aria-label="Main menu">
+        <ul class="gnb__list">
+          <li><a class="gnb__link" href="about.html">About Us</a></li>
+          <li><a class="gnb__link" href="technology.html">Technology·R&amp;D</a></li>
+          <li><a class="gnb__link" href="products.html">Products</a></li>
+          <li><a class="gnb__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="gnb__mobile-extra">
+          <a class="btn btn--primary" href="contact.html">Product Inquiry</a>
+          <div class="lang" aria-label="Language">
+            <a href="../index.html" lang="ko">KOR</a>
+            <a href="index.html" aria-current="true" lang="en">ENG</a>
+            <a href="../cn/index.html" lang="zh">CHN</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-util">
+        <div class="lang" aria-label="Language">
+          <a href="../index.html" lang="ko">KOR</a>
+          <a href="index.html" aria-current="true" lang="en">ENG</a>
+          <a href="../cn/index.html" lang="zh">CHN</a>
+        </div>
+        <a class="btn btn--primary header-cta" href="contact.html">Inquiry</a>
+        <button class="menu-toggle" type="button" aria-controls="gnb" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main">
+
+    <!-- 1. 히어로 (자동 슬라이드 · 동작: js/home.js) -->
+    <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Main visual">
+      <div class="hero__bg hero__bg--ai is-active"></div>
+      <div class="hero__bg hero__bg--pkg"></div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 class="sr-only">ORCHEM — Chemical Materials for PCB & Semiconductor Packaging</h1>
+          <div class="hero__copies">
+            <!-- 슬라이드 1: AI 첨단 반도체 -->
+            <div class="hero__copy is-active" role="group" aria-roledescription="slide" aria-label="1 / 2">
+              <p class="eyebrow">AI · Advanced Semiconductor</p>
+              <h2 class="hero__title">Semiconductor Package Process<br>Chemical Materials and <br class="br-pc"><em>Advanced Chemical Materials</em></h2>
+              <p class="hero__desc">ORCHEM develops and supplies key chemical materials for the electrical and electronics industry, including TVs, smartphones, advanced semiconductors and aviation.</p>
+            </div>
+            <!-- 슬라이드 2: 반도체 패키지 공정 -->
+            <div class="hero__copy" role="group" aria-roledescription="slide" aria-label="2 / 2" aria-hidden="true">
+              <p class="eyebrow">Optimal Reaction through Chemistry</p>
+              <h2 class="hero__title">ORCHEM <span class="hero__sep">|</span><br><em>Total Chemical <br class="br-pc">Solutions</em></h2>
+              <p class="hero__desc">ORCHEM develops and supplies key chemical materials for the electrical and electronics industry, including TVs, smartphones, advanced semiconductors and aviation.</p>
+            </div>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="products.html">View Products</a>
+            <a class="btn btn--ghost" href="contact.html">Technical Inquiry</a>
+          </div>
+          <div class="hero__apps">
+            <p class="hero__apps-label">Applications</p>
+            <ul>
+              <li>Smartphones</li><li>Wearable Devices</li><li>Aircraft</li><li>Telecommunications</li><li>AI</li><li>Semiconductor</li><li>Display</li>
+            </ul>
+          </div>
+
+          <div class="hero__controls">
+            <div class="hero__dots" role="group" aria-label="Select slide">
+              <button type="button" class="hero__dot" aria-label="Slide 1: AI & advanced semiconductors" aria-current="true"><span></span></button>
+              <button type="button" class="hero__dot" aria-label="Slide 2: Semiconductor package process" aria-current="false"><span></span></button>
+            </div>
+            <p class="hero__count" aria-hidden="true"><b id="hero-current">01</b> / 02</p>
+            <button type="button" class="hero__pause" aria-label="Pause slideshow">
+              <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
+              <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11a.8.8 0 0 0 1.2.7l9-5.5a.8.8 0 0 0 0-1.4l-9-5.5A.8.8 0 0 0 4 2.5z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero__visuals" aria-hidden="true">
+          <!-- 슬라이드 1 그림: AI 반도체 칩 + PCB 회로 (회로를 따라 신호가 흐르는 애니메이션) -->
+          <div class="hero__visual is-active">
+            <svg viewBox="0 0 560 440" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="aiGlowGrad"><stop offset="0" stop-color="#1EB5BC" stop-opacity=".9"/><stop offset="1" stop-color="#1EB5BC" stop-opacity="0"/></radialGradient>
+                <linearGradient id="aiDieGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2BC9CF"/><stop offset="1" stop-color="#00626F"/></linearGradient>
+                <pattern id="aiDots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,.09)"/></pattern>
+              </defs>
+              <!-- 기판 -->
+              <rect class="ai-board" x="6" y="6" width="548" height="428" rx="18" fill="rgba(255,255,255,.03)"/>
+              <rect x="6" y="6" width="548" height="428" rx="18" fill="url(#aiDots)"/>
+              <!-- 회로 -->
+              <g class="ai-traces">
+                <path d="M220 140 L220 124 L166 70 L166 24"/><path d="M240 140 L240 119 L204 83 L204 34"/><path d="M260 140 L260 114 L242 96 L242 24"/><path d="M280 140 L280 34"/>
+                <path d="M300 140 L300 114 L318 96 L318 24"/><path d="M320 140 L320 119 L356 83 L356 34"/><path d="M340 140 L340 124 L394 70 L394 24"/>
+                <path d="M220 300 L220 316 L166 370 L166 416"/><path d="M240 300 L240 321 L204 357 L204 406"/><path d="M260 300 L260 326 L242 344 L242 416"/><path d="M280 300 L280 406"/>
+                <path d="M300 300 L300 326 L318 344 L318 416"/><path d="M320 300 L320 321 L356 357 L356 406"/><path d="M340 300 L340 316 L394 370 L394 416"/>
+                <path d="M200 160 L184 160 L130 106 L24 106"/><path d="M200 180 L179 180 L143 144 L34 144"/><path d="M200 200 L174 200 L156 182 L24 182"/><path d="M200 220 L34 220"/>
+                <path d="M200 240 L174 240 L156 258 L24 258"/><path d="M200 260 L179 260 L143 296 L34 296"/><path d="M200 280 L184 280 L130 334 L24 334"/>
+                <path d="M360 160 L376 160 L430 106 L536 106"/><path d="M360 180 L381 180 L417 144 L526 144"/><path d="M360 200 L386 200 L404 182 L536 182"/><path d="M360 220 L526 220"/>
+                <path d="M360 240 L386 240 L404 258 L536 258"/><path d="M360 260 L381 260 L417 296 L526 296"/><path d="M360 280 L376 280 L430 334 L536 334"/>
+              </g>
+              <!-- 신호 흐름 -->
+              <g class="ai-pulses">
+                <path class="trace-pulse" d="M220 140 L220 124 L166 70 L166 24" pathLength="100" style="animation-delay:0s"/>
+                <path class="trace-pulse" d="M260 140 L260 114 L242 96 L242 24" pathLength="100" style="animation-delay:.74s"/>
+                <path class="trace-pulse" d="M300 140 L300 114 L318 96 L318 24" pathLength="100" style="animation-delay:1.48s"/>
+                <path class="trace-pulse" d="M340 140 L340 124 L394 70 L394 24" pathLength="100" style="animation-delay:2.22s"/>
+                <path class="trace-pulse" d="M240 300 L240 321 L204 357 L204 406" pathLength="100" style="animation-delay:2.96s"/>
+                <path class="trace-pulse" d="M280 300 L280 406" pathLength="100" style="animation-delay:.5s"/>
+                <path class="trace-pulse" d="M320 300 L320 321 L356 357 L356 406" pathLength="100" style="animation-delay:1.24s"/>
+                <path class="trace-pulse" d="M200 160 L184 160 L130 106 L24 106" pathLength="100" style="animation-delay:1.98s"/>
+                <path class="trace-pulse" d="M200 200 L174 200 L156 182 L24 182" pathLength="100" style="animation-delay:2.72s"/>
+                <path class="trace-pulse" d="M200 240 L174 240 L156 258 L24 258" pathLength="100" style="animation-delay:.26s"/>
+                <path class="trace-pulse" d="M200 280 L184 280 L130 334 L24 334" pathLength="100" style="animation-delay:1s"/>
+                <path class="trace-pulse" d="M360 180 L381 180 L417 144 L526 144" pathLength="100" style="animation-delay:1.74s"/>
+                <path class="trace-pulse" d="M360 220 L526 220" pathLength="100" style="animation-delay:2.48s"/>
+                <path class="trace-pulse" d="M360 260 L381 260 L417 296 L526 296" pathLength="100" style="animation-delay:.02s"/>
+              </g>
+              <!-- 비아 -->
+              <g class="ai-vias">
+                <circle cx="166" cy="24" r="4.5"/><circle cx="204" cy="34" r="4.5"/><circle cx="242" cy="24" r="4.5"/><circle cx="280" cy="34" r="4.5"/><circle cx="318" cy="24" r="4.5"/><circle cx="356" cy="34" r="4.5"/><circle cx="394" cy="24" r="4.5"/>
+                <circle cx="166" cy="416" r="4.5"/><circle cx="204" cy="406" r="4.5"/><circle cx="242" cy="416" r="4.5"/><circle cx="280" cy="406" r="4.5"/><circle cx="318" cy="416" r="4.5"/><circle cx="356" cy="406" r="4.5"/><circle cx="394" cy="416" r="4.5"/>
+                <circle cx="24" cy="106" r="4.5"/><circle cx="34" cy="144" r="4.5"/><circle cx="24" cy="182" r="4.5"/><circle cx="34" cy="220" r="4.5"/><circle cx="24" cy="258" r="4.5"/><circle cx="34" cy="296" r="4.5"/><circle cx="24" cy="334" r="4.5"/>
+                <circle cx="536" cy="106" r="4.5"/><circle cx="526" cy="144" r="4.5"/><circle cx="536" cy="182" r="4.5"/><circle cx="526" cy="220" r="4.5"/><circle cx="536" cy="258" r="4.5"/><circle cx="526" cy="296" r="4.5"/><circle cx="536" cy="334" r="4.5"/>
+              </g>
+              <!-- 칩 패키지 -->
+              <circle class="ai-glow" cx="280" cy="220" r="160" fill="url(#aiGlowGrad)"/>
+              <rect x="200" y="140" width="160" height="160" rx="12" fill="#062E34" stroke="#1EB5BC" stroke-width="1.5"/>
+              <g class="ai-pins">
+                <rect x="217" y="135" width="6" height="5"/><rect x="237" y="135" width="6" height="5"/><rect x="257" y="135" width="6" height="5"/><rect x="277" y="135" width="6" height="5"/><rect x="297" y="135" width="6" height="5"/><rect x="317" y="135" width="6" height="5"/><rect x="337" y="135" width="6" height="5"/>
+                <rect x="217" y="300" width="6" height="5"/><rect x="237" y="300" width="6" height="5"/><rect x="257" y="300" width="6" height="5"/><rect x="277" y="300" width="6" height="5"/><rect x="297" y="300" width="6" height="5"/><rect x="317" y="300" width="6" height="5"/><rect x="337" y="300" width="6" height="5"/>
+                <rect x="195" y="157" width="5" height="6"/><rect x="195" y="177" width="5" height="6"/><rect x="195" y="197" width="5" height="6"/><rect x="195" y="217" width="5" height="6"/><rect x="195" y="237" width="5" height="6"/><rect x="195" y="257" width="5" height="6"/><rect x="195" y="277" width="5" height="6"/>
+                <rect x="360" y="157" width="5" height="6"/><rect x="360" y="177" width="5" height="6"/><rect x="360" y="197" width="5" height="6"/><rect x="360" y="217" width="5" height="6"/><rect x="360" y="237" width="5" height="6"/><rect x="360" y="257" width="5" height="6"/><rect x="360" y="277" width="5" height="6"/>
+              </g>
+              <!-- HBM (좌·우) -->
+              <rect class="ai-hbm" x="212" y="172" width="26" height="96" rx="3"/>
+              <rect class="ai-hbm" x="322" y="172" width="26" height="96" rx="3"/>
+              <g class="ai-hbm-line">
+                <line x1="212" y1="196" x2="238" y2="196"/><line x1="212" y1="220" x2="238" y2="220"/><line x1="212" y1="244" x2="238" y2="244"/>
+                <line x1="322" y1="196" x2="348" y2="196"/><line x1="322" y1="220" x2="348" y2="220"/><line x1="322" y1="244" x2="348" y2="244"/>
+              </g>
+              <text class="ai-sub" x="225" y="164" text-anchor="middle">HBM</text>
+              <text class="ai-sub" x="335" y="164" text-anchor="middle">HBM</text>
+              <!-- AI 다이 -->
+              <rect x="246" y="168" width="68" height="104" rx="5" fill="url(#aiDieGrad)"/>
+              <g class="ai-grid">
+                <line x1="263" y1="168" x2="263" y2="272"/><line x1="280" y1="168" x2="280" y2="272"/><line x1="297" y1="168" x2="297" y2="272"/>
+                <line x1="246" y1="194" x2="314" y2="194"/><line x1="246" y1="220" x2="314" y2="220"/><line x1="246" y1="246" x2="314" y2="246"/>
+              </g>
+              <rect x="256" y="203" width="48" height="34" rx="4" fill="#00434C" opacity=".85"/>
+              <text class="ai-label" x="280" y="231" text-anchor="middle">AI</text>
+              <text class="ai-sub" x="280" y="290" text-anchor="middle">SUBSTRATE · PCB</text>
+            </svg>
+          </div>
+
+          <!-- 슬라이드 2 그림: 반도체 패키지 · PCB 단면 (2026 전단지 Products Line-up 중앙 그림을 브랜드 색으로 재구성) -->
+          <div class="hero__visual">
+          <svg class="pcb-svg" viewBox="0 0 620 390" xmlns="http://www.w3.org/2000/svg">
+            <!-- PCB -->
+            <rect x="20" y="262" width="560" height="84" rx="6" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.35)"/>
+            <g fill="rgba(255,255,255,.14)">
+              <rect x="60" y="262" width="6" height="84"/><rect x="150" y="262" width="6" height="84"/>
+              <rect x="450" y="262" width="6" height="84"/><rect x="540" y="262" width="6" height="84"/>
+            </g>
+            <g fill="#1EB5BC" opacity=".85">
+              <rect x="80" y="280" width="30" height="4" rx="1"/><rect x="90" y="324" width="26" height="4" rx="1"/>
+              <rect x="190" y="302" width="26" height="4" rx="1"/><rect x="245" y="280" width="24" height="4" rx="1"/>
+              <rect x="250" y="324" width="28" height="4" rx="1"/><rect x="330" y="302" width="30" height="4" rx="1"/>
+              <rect x="370" y="324" width="26" height="4" rx="1"/><rect x="480" y="280" width="30" height="4" rx="1"/>
+              <rect x="500" y="324" width="30" height="4" rx="1"/><rect x="545" y="322" width="22" height="6" rx="1"/>
+            </g>
+            <!-- PCB 비아 · 패드 -->
+            <rect x="171" y="262" width="8" height="84" fill="#128E94"/>
+            <rect x="296" y="262" width="8" height="84" fill="#1EB5BC" opacity=".8"/>
+            <rect x="411" y="262" width="8" height="84" fill="#1EB5BC"/>
+            <g fill="#1EB5BC">
+              <rect x="165" y="262" width="20" height="4"/><rect x="290" y="262" width="20" height="4"/><rect x="405" y="262" width="20" height="4"/>
+              <rect x="165" y="342" width="20" height="4"/><rect x="290" y="342" width="20" height="4"/><rect x="405" y="342" width="20" height="4"/>
+            </g>
+            <!-- 솔더 범프 -->
+            <g fill="rgba(255,255,255,.62)">
+              <circle cx="160" cy="250" r="8"/><circle cx="195" cy="250" r="8"/><circle cx="230" cy="250" r="8"/><circle cx="265" cy="250" r="8"/><circle cx="300" cy="250" r="8"/>
+              <circle cx="335" cy="250" r="8"/><circle cx="370" cy="250" r="8"/><circle cx="405" cy="250" r="8"/><circle cx="440" cy="250" r="8"/>
+            </g>
+            <!-- PKG 기판 (Glass Core) -->
+            <rect x="140" y="178" width="320" height="8" fill="rgba(255,255,255,.22)"/>
+            <rect x="140" y="186" width="320" height="44" fill="rgba(30,181,188,.16)"/>
+            <rect x="140" y="230" width="320" height="8" fill="rgba(255,255,255,.22)"/>
+            <rect x="140" y="178" width="320" height="60" rx="3" fill="none" stroke="#1EB5BC"/>
+            <g fill="#1EB5BC">
+              <polygon points="159,186 171,186 167,208 171,230 159,230 163,208"/>
+              <polygon points="189,186 201,186 197,208 201,230 189,230 193,208"/>
+              <polygon points="222,186 234,186 230,208 234,230 222,230 226,208"/>
+              <polygon points="252,186 264,186 260,208 264,230 252,230 256,208"/>
+              <polygon points="282,186 294,186 290,208 294,230 282,230 286,208"/>
+              <polygon points="312,186 324,186 320,208 324,230 312,230 316,208"/>
+              <polygon points="346,186 358,186 354,208 358,230 346,230 350,208"/>
+              <polygon points="379,186 391,186 387,208 391,230 379,230 383,208"/>
+              <polygon points="412,186 424,186 420,208 424,230 412,230 416,208"/>
+              <polygon points="439,186 451,186 447,208 451,230 439,230 443,208"/>
+            </g>
+            <!-- 인터포저 아래 범프 -->
+            <g fill="rgba(255,255,255,.6)">
+              <circle cx="160" cy="174" r="3"/><circle cx="180" cy="174" r="3"/><circle cx="200" cy="174" r="3"/><circle cx="220" cy="174" r="3"/><circle cx="240" cy="174" r="3"/><circle cx="260" cy="174" r="3"/><circle cx="280" cy="174" r="3"/>
+              <circle cx="315" cy="174" r="3"/><circle cx="335" cy="174" r="3"/><circle cx="355" cy="174" r="3"/><circle cx="375" cy="174" r="3"/><circle cx="395" cy="174" r="3"/><circle cx="415" cy="174" r="3"/><circle cx="440" cy="174" r="3"/>
+            </g>
+            <!-- Glass Interposer / Silicon Interposer -->
+            <rect x="150" y="152" width="140" height="18" rx="2" fill="rgba(30,181,188,.28)" stroke="#1EB5BC"/>
+            <rect x="305" y="152" width="145" height="18" rx="2" fill="rgba(255,255,255,.16)" stroke="rgba(255,255,255,.55)"/>
+            <g fill="#1EB5BC">
+              <rect x="178" y="152" width="3" height="18"/><rect x="208" y="152" width="3" height="18"/><rect x="238" y="152" width="3" height="18"/><rect x="268" y="152" width="3" height="18"/>
+              <rect x="335" y="152" width="3" height="18"/><rect x="365" y="152" width="3" height="18"/><rect x="395" y="152" width="3" height="18"/><rect x="425" y="152" width="3" height="18"/>
+            </g>
+            <!-- 마이크로 범프 -->
+            <g fill="rgba(255,255,255,.6)">
+              <circle cx="175" cy="148" r="2.5"/><circle cx="190" cy="148" r="2.5"/><circle cx="205" cy="148" r="2.5"/><circle cx="220" cy="148" r="2.5"/><circle cx="235" cy="148" r="2.5"/><circle cx="250" cy="148" r="2.5"/><circle cx="265" cy="148" r="2.5"/>
+              <circle cx="330" cy="148" r="2.5"/><circle cx="345" cy="148" r="2.5"/><circle cx="360" cy="148" r="2.5"/><circle cx="375" cy="148" r="2.5"/><circle cx="390" cy="148" r="2.5"/><circle cx="405" cy="148" r="2.5"/><circle cx="420" cy="148" r="2.5"/>
+            </g>
+            <!-- HBM 적층 -->
+            <g fill="rgba(255,255,255,.13)" stroke="rgba(255,255,255,.5)">
+              <rect x="165" y="72" width="110" height="10" rx="1.5"/><rect x="165" y="84" width="110" height="10" rx="1.5"/><rect x="165" y="96" width="110" height="10" rx="1.5"/>
+              <rect x="165" y="108" width="110" height="10" rx="1.5"/><rect x="165" y="120" width="110" height="10" rx="1.5"/><rect x="165" y="132" width="110" height="12" rx="1.5"/>
+            </g>
+            <g stroke="#1EB5BC" stroke-width="2">
+              <line x1="190" y1="72" x2="190" y2="144"/><line x1="220" y1="72" x2="220" y2="144"/><line x1="250" y1="72" x2="250" y2="144"/>
+            </g>
+            <!-- 반도체 칩 -->
+            <rect x="320" y="114" width="115" height="30" rx="2" fill="rgba(255,255,255,.2)" stroke="rgba(255,255,255,.6)"/>
+            <g stroke="rgba(255,255,255,.25)"><line x1="332" y1="124" x2="423" y2="124"/><line x1="332" y1="134" x2="423" y2="134"/></g>
+
+            <!-- 라벨 -->
+            <text class="pkg-label" x="220" y="60" text-anchor="middle">HBM</text>
+            <text class="pkg-label" x="377" y="104" text-anchor="middle">SemiConductor</text>
+            <path class="pkg-lead" d="M138 161 H150"/><text class="pkg-label" x="134" y="165" text-anchor="end">Glass Interposer</text>
+            <path class="pkg-lead" d="M450 161 H466"/><text class="pkg-label" x="470" y="165">Silicon Interposer</text>
+            <path class="pkg-lead" d="M460 208 H466"/><text class="pkg-label" x="470" y="212">PKG (Glass Core)</text>
+            <text class="pkg-label" x="300" y="372" text-anchor="middle">PCB</text>
+
+            <!-- 오알켐 제품 적용 부위 (번호는 아래 범례와 같음) -->
+            <g class="pkg-markers">
+              <circle class="pkg-pulse" cx="40" cy="304" r="11"/><g class="pkg-marker"><circle cx="40" cy="304" r="11"/><text x="40" y="308">1</text></g>
+              <circle class="pkg-pulse" cx="175" cy="266" r="11" style="animation-delay:.5s"/><g class="pkg-marker"><circle cx="175" cy="266" r="11"/><text x="175" y="270">2</text></g>
+              <circle class="pkg-pulse" cx="415" cy="266" r="11" style="animation-delay:1s"/><g class="pkg-marker"><circle cx="415" cy="266" r="11"/><text x="415" y="270">3</text></g>
+              <circle class="pkg-pulse" cx="175" cy="342" r="11" style="animation-delay:1.5s"/><g class="pkg-marker"><circle cx="175" cy="342" r="11"/><text x="175" y="346">4</text></g>
+              <circle class="pkg-pulse" cx="556" cy="325" r="11" style="animation-delay:2s"/><g class="pkg-marker"><circle cx="556" cy="325" r="11"/><text x="556" y="329">5</text></g>
+            </g>
+          </svg>
+          <p class="hero__legend-title">Where ORCHEM products are applied</p>
+          <ol class="hero__legend">
+            <li><b>1</b>Lamination</li><li><b>2</b>Electro Cu Plating</li><li><b>3</b>E'less Cu Plating</li><li><b>4</b>DFR Stripping</li><li><b>5</b>Etchant &amp; Cleaner</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 주력 제품 -->
+    <!-- 출처: 2026년 전단지(국문) Products Line-up, orchem.com 제품정보 > Chemicals -->
+    <section class="section" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Products</p>
+          <h2 class="section-title" id="products-title">Key Products</h2>
+          <p class="section-desc">From PCBs to semiconductor packages, we supply the key chemicals for plating and stripping processes.</p>
+        </div>
+
+        <div class="grid grid--3 product-grid">
+          <a class="card product-card" href="product.html?id=eless-cu">
+            <span class="product-card__num">01</span>
+            <p class="product-card__en">E'less Cu Plating</p>
+            <h3 class="product-card__title">E'less Cu Plating</h3>
+            <p class="product-card__series">ORC-400 series</p>
+            <p class="product-card__codes"><span>ORC-464</span><span>ORC-F463</span><span>ORC-H463</span><span>ORC-P463</span><span>ORC-HV463</span></p>
+            <ul class="tag-list" aria-label="Applications">
+              <li>HDI</li><li>MLB</li><li>RFPCB</li><li>FPCB</li><li>PKG</li>
+            </ul>
+            <ul class="check-list">
+              <li>Excellent hole lining coverage</li>
+              <li>Excellent P.I. film adhesion</li>
+              <li>Rigid · Flexible</li>
+              <li>Horizontal and vertical lines available</li>
+            </ul>
+            <span class="more-link">Learn More
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a class="card product-card" href="product.html?id=electro-cu">
+            <span class="product-card__num">02</span>
+            <p class="product-card__en">Electro Cu Plating</p>
+            <h3 class="product-card__title">Electro Cu Plating</h3>
+            <p class="product-card__series">ORC-800 · Zenith series</p>
+            <p class="product-card__codes"><span>ORC-813</span><span>ORC-814</span><span>ORC-814H</span><span>Zenith-800</span><span>850</span><span>910</span><span>1000</span><span>1500</span></p>
+            <ul class="tag-list" aria-label="Applications">
+              <li>HDI</li><li>MLB</li><li>FPCB</li><li>PKG</li><li>Semiconductor</li>
+            </ul>
+            <ul class="check-list">
+              <li>Excellent throwing power</li>
+              <li>Excellent fill rates at low plating thicknesses</li>
+              <li>Dimple Free</li>
+              <li>TGV full fill capability (Zenith-1000 · 1500)</li>
+            </ul>
+            <span class="more-link">Learn More
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+
+          <a class="card product-card" href="product.html?id=dfr-stripper">
+            <span class="product-card__num">03</span>
+            <p class="product-card__en">DFR Stripper</p>
+            <h3 class="product-card__title">D/F Stripper</h3>
+            <p class="product-card__series">ORC-700 · Vacuus series</p>
+            <p class="product-card__codes"><span>DFS-4522</span><span>ORC-730</span><span>ORC-725A</span><span>V-50</span><span>V-100</span><span>V-150</span><span>V-200</span><span>SF-300</span><span>V-300</span></p>
+            <ul class="tag-list" aria-label="Applications">
+              <li>HDI</li><li>MLB</li><li>PKG</li>
+            </ul>
+            <ul class="check-list">
+              <li>Fine pattern and PKG processing available</li>
+              <li>Constant peel rate · particle size</li>
+              <li>Low R-cost (easy wastewater treatment)</li>
+              <li>Eco-friendly TMAH-free stripper</li>
+            </ul>
+            <span class="more-link">Learn More
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="product-etc">
+          <p><strong>Other line-up</strong> — Stacking Solution (Brown · Black Oxide), Etchant &amp; Cleaner, D/F Pre-treatment</p>
+          <a class="btn btn--outline" href="products.html">View All Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 기술 강점 -->
+    <!-- 출처: orchem.com 제품정보 > 사업개요 / Chemicals / 미래산업, 연구개발 > 연구소 소개, 메인 Contact US, 전단지 -->
+    <section class="section section--soft" aria-labelledby="strength-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow">Why ORCHEM</p>
+          <h2 class="section-title" id="strength-title">ORCHEM's technical strengths</h2>
+          <p class="section-desc">Our in-house R&D capabilities and a line-up covering the entire process support our customers' production sites.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <p class="stat__value">130<small>+ types</small></p>
+            <p class="stat__label">Chemicals for PCB processes</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">41<small>%</small></p>
+            <p class="stat__label">Share of research personnel</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">2000</p>
+            <p class="stat__label">Main Lab established</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">3<small> countries</small></p>
+            <p class="stat__label">Korea · China · Vietnam</p>
+          </div>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card strength">
+            <div class="strength__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+            </div>
+            <div>
+              <h3>Total solution for the entire PCB process</h3>
+              <p>We develop and supply chemicals for the entire PCB manufacturing process, from pre-treatment to plating, stripping and lamination. Our brown oxide holds a high share of the domestic oxide market.</p>
+              <div class="chip-flow">
+                <span>Lamination</span><i>›</i><span>E'less Cu</span><i>›</i><span>Electro Cu</span><i>›</i><span>D/F Pre-treatment</span><i>›</i><span>D/F Stripping</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card strength">
+            <div class="strength__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+            </div>
+            <div>
+              <h3>Ready for next-generation semiconductor packages</h3>
+              <p>We develop plating materials for advanced package processes such as HBM, silicon and glass interposers and glass core substrates. The Zenith series supports TGV full fill plating.</p>
+              <div class="chip-flow">
+                <span>FC-BGA</span><span>FC-CSP</span><span>AiP</span><span>SiP</span><span>TGV</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card strength">
+            <div class="strength__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 9.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7.5 15h9"/></svg>
+            </div>
+            <div>
+              <h3>In-house Main Lab for development and analysis</h3>
+              <p>Our Main Lab, established in 2000, continues to develop new products and upgrade existing ones. Our analytics and technology innovation teams support customer defect analysis and on-site troubleshooting.</p>
+            </div>
+          </article>
+
+          <article class="card strength">
+            <div class="strength__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-4 4.5-6 7.8-6 10.5a6 6 0 0 0 12 0C18 10.8 16 7.5 12 3z"/><path d="M9.5 14.5l2 2 3.5-3.5"/></svg>
+            </div>
+            <div>
+              <h3>Environmentally friendly products</h3>
+              <p>We have developed eco-friendly products such as strippers that are more environmentally friendly than amine types and TMAH-free strippers. ORCHEM received the Green Pioneer Award at KPCA Show 2026 and CPCA Show 2026.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 문의 유도 -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2 id="cta-title">Do you have questions about ORCHEM?</h2>
+            <p>Ask us about product specifications and process applications, and our team will get back to you.</p>
+          </div>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="contact.html">Contact Us</a>
+            <span class="cta__tel">Main Phone <a href="tel:+82-31-488-0600">+82-31-488-0600</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="footer-brand">
+          <img src="../assets/images/logo-white.png" alt="ORCHEM" width="146" height="30" loading="lazy">
+          <p class="footer-brand__slogan">Beyond the Best! Total Chemical Solution Company!</p>
+        </div>
+
+        <div>
+          <h2 class="footer-title">ORCHEM Co., Ltd.</h2>
+          <dl class="footer-info">
+            <dt>CEO</dt><dd>Jaehyun Lee</dd>
+            <dt>Headquarters</dt><dd>705, Sihwa Venture-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Republic of Korea</dd>
+            <dt>Main Phone</dt><dd><a href="tel:+82-31-488-0600">+82-31-488-0600</a></dd>
+            <dt>Fax</dt><dd>+82-31-488-0660</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2 class="footer-title">Locations</h2>
+          <ul class="footer-sites">
+            <li><strong>Korea</strong>Ansan Headquarters (Main Lab) · Gumi Plant</li>
+            <li><strong>China</strong>Shenzhen Logistics Office · New Plant &amp; Reliability Center in Jiaxing, Zhejiang</li>
+            <li><strong>Vietnam</strong>Vietnam Corporation (Chemical and Plating Plant, 2nd Lab)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <ul class="footer-links">
+          <!-- TODO: 개인정보처리방침 페이지 제작 후 링크 연결 -->
+          <li><a href="contact.html">Customer Support</a></li>
+          <li><a href="https://orchem.com/eng/main.php" target="_blank" rel="noopener">Corporate Website</a></li>
+        </ul>
+        <div class="footer-sns">
+          <a href="https://www.linkedin.com/company/orchem9191/" target="_blank" rel="noopener" aria-label="ORCHEM on LinkedIn (new window)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.6-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11z"/></svg>
+          </a>
+          <a href="https://blog.naver.com/orchem01" target="_blank" rel="noopener" aria-label="ORCHEM Naver Blog (new window)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4.6l4.9 7.1V4H19v16h-4.6l-4.9-7.1V20H5z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">Copyright &copy; <span data-year>2026</span> ORCHEM Co.,Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/home.js" defer></script>
+</body>
+</html>

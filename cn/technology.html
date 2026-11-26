@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="has-subnav">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>技术·研发 | ORCHEM</title>
+  <meta name="description" content="介绍 ORCHEM 中央研究所的 TGV Fill 电镀、长寿命活化剂、Via Fill 电镀等核心技术，以及开发履历、研发路线图与研究器材。">
+  <meta name="theme-color" content="#00626F">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/technology.css">
+</head>
+<body class="page-tech" data-base="../">
+  <a class="skip-link" href="#main">跳至正文</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="ORCHEM 首页">
+        <img src="../assets/images/logo-color.png" alt="ORCHEM" width="146" height="30">
+      </a>
+
+      <nav class="gnb" id="gnb" aria-label="主菜单">
+        <ul class="gnb__list">
+          <li><a class="gnb__link" href="about.html">公司介绍</a></li>
+          <li><a class="gnb__link" href="technology.html" aria-current="page">技术·研发</a></li>
+          <li><a class="gnb__link" href="products.html">产品</a></li>
+          <li><a class="gnb__link" href="contact.html">咨询</a></li>
+        </ul>
+        <div class="gnb__mobile-extra">
+          <a class="btn btn--primary" href="contact.html">产品咨询</a>
+          <div class="lang" aria-label="选择语言">
+            <a href="../technology.html" lang="ko">KOR</a>
+            <a href="../en/technology.html" lang="en">ENG</a>
+            <a href="technology.html" aria-current="true" lang="zh">CHN</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-util">
+        <div class="lang" aria-label="选择语言">
+          <a href="../technology.html" lang="ko">KOR</a>
+          <a href="../en/technology.html" lang="en">ENG</a>
+          <a href="technology.html" aria-current="true" lang="zh">CHN</a>
+        </div>
+        <a class="btn btn--primary header-cta" href="contact.html">产品咨询</a>
+        <button class="menu-toggle" type="button" aria-controls="gnb" aria-expanded="false" aria-label="打开菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <!-- 출처: 회사소개서 PPTX(R&D 14~18p), 2026 KPCA 국문 판넬(좌측), orchem.com 연구개발 메뉴(연구소 소개·개발이력·연구기자재), 제품정보 > 미래산업 -->
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div>
+          <ol class="breadcrumb" aria-label="当前位置">
+            <li><a href="index.html">首页</a></li>
+            <li aria-current="page">技术·研发</li>
+          </ol>
+          <h1>技术·研发</h1>
+          <p>以独家技术引领国产化的 ORCHEM 研发</p>
+        </div>
+        <!-- 우측 그래픽: 분자 구조 설계 → 유리기판 TGV Fill 도금 -->
+        <figure class="page-hero__media" aria-hidden="true">
+          <svg class="hero-art" viewBox="0 0 440 275" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="tcDots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="1" fill="rgba(255,255,255,.1)"/></pattern></defs>
+            <rect width="440" height="275" fill="url(#tcDots)"/>
+            <!-- 분자 구조 -->
+            <polygon points="170,125 150,159.6 110,159.6 90,125 110,90.4 150,90.4" fill="rgba(30,181,188,.12)" class="ln-mint"/>
+            <circle cx="130" cy="125" r="21" class="ln"/>
+            <path class="ln" d="M170 125 H202 M110 90.4 L94 62 M110 159.6 L94 188 M150 159.6 L166 188"/>
+            <circle class="pulse" cx="208" cy="125" r="7"/><circle class="node" cx="208" cy="125" r="7"/>
+            <circle class="node" cx="91" cy="57" r="6"/><circle class="node" cx="91" cy="193" r="6"/><circle class="node" cx="169" cy="193" r="6"/>
+            <text class="t" x="130" y="232" text-anchor="middle">MOLECULAR DESIGN</text>
+            <text class="ts" x="130" y="248" text-anchor="middle">A.P. 分子结构自主设计</text>
+            <!-- 흐름 -->
+            <path class="ln" d="M215 125 C236 125 244 132 262 132"/><path class="flow" d="M215 125 C236 125 244 132 262 132"/>
+            <!-- 유리기판 TGV -->
+            <rect x="264" y="76" width="140" height="6" fill="rgba(255,255,255,.3)"/>
+            <rect x="264" y="82" width="140" height="104" fill="rgba(30,181,188,.14)" class="ln-mint"/>
+            <rect x="264" y="186" width="140" height="6" fill="rgba(255,255,255,.3)"/>
+            <g fill="#1EB5BC">
+              <polygon points="279,82 293,82 289,134 293,186 279,186 283,134"/>
+              <polygon points="309,82 323,82 319,134 323,186 309,186 313,134"/>
+              <polygon points="339,82 353,82 349,134 353,186 339,186 343,134"/>
+              <polygon points="369,82 383,82 379,134 383,186 369,186 373,134"/>
+            </g>
+            <circle class="pulse" cx="346" cy="134" r="5" style="animation-delay:1s"/>
+            <text class="t" x="334" y="222" text-anchor="middle">TGV FILL</text>
+            <text class="ts" x="334" y="238" text-anchor="middle">Glass Core 电镀</text>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <nav class="subnav" aria-label="技术·研发栏目">
+      <div class="container">
+        <ul>
+          <li><a href="#lab">中央研究所</a></li>
+          <li><a href="#core">核心技术</a></li>
+          <li><a href="#history">开发履历</a></li>
+          <li><a href="#roadmap">路线图</a></li>
+          <li><a href="#equipment">研究器材</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 1. 중앙연구소 -->
+    <section class="section" id="lab" aria-labelledby="lab-title">
+      <div class="container">
+        <div class="lab">
+          <div>
+            <p class="eyebrow">Central R&amp;D Lab.</p>
+            <h2 class="lab__slogan" id="lab-title">Creative R&amp;D, Active R&amp;D, The Best Products!</h2>
+            <div class="lab__text">
+              <p>2000年成立的 ORCHEM Central R&amp;D Lab 以优秀的人才储备与技术经验为基础，迅速应对急剧变化的市场，并在新产品与新技术开发上不断挑战。通过独家技术开发、专利以及国内外客户的品质认可，产品力与信赖性获得肯定。</p>
+            </div>
+            <div class="lab__mission">
+              <p>R&amp;D Mission</p>
+              <ul class="keyword-list">
+                <li>新产品开发</li><li>产品更新</li><li>Data &amp; 经验累积</li><li>客户满足</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="rd-stats">
+            <div class="rd-stat rd-stat--wide">
+              <p class="rd-stat__value">41<small>%</small></p>
+              <p class="rd-stat__label">总部研发人员占比</p>
+              <p class="rd-stat__note">总部141名中占58名 · 另有越南研发人员17名</p>
+            </div>
+            <div class="rd-stat">
+              <p class="rd-stat__value">47<small>台</small></p>
+              <p class="rd-stat__label">研发设施和设备</p>
+              <p class="rd-stat__note">分析设备21台 · 信赖性设备17台 · Pilot Line 9条</p>
+            </div>
+            <div class="rd-stat">
+              <p class="rd-stat__value">21<small>件</small></p>
+              <p class="rd-stat__label">研发成果（2020~2025）</p>
+              <p class="rd-stat__note">研发14件 · 改善7件</p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="functions" aria-label="研究所职能">
+          <li class="function"><span class="function__num">01</span><h3>产品开发</h3><ul><li>持续性产品更新</li><li>PCB 工程药品开发</li></ul></li>
+          <li class="function"><span class="function__num">02</span><h3>先行开发</h3><ul><li>新工程产品开发</li><li>原材料合成技术</li></ul></li>
+          <li class="function"><span class="function__num">03</span><h3>分析技术</h3><ul><li>先行开发分析</li><li>客户不良分析</li></ul></li>
+          <li class="function"><span class="function__num">04</span><h3>技术革新</h3><ul><li>PCB 全工程技术对应</li><li>Trouble shooting</li></ul></li>
+          <li class="function"><span class="function__num">05</span><h3>研究企划</h3><ul><li>实验环境改善及安全管理</li><li>内部数据累积及研究员培训</li></ul></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. 핵심 기술 -->
+    <section class="section section--soft" id="core" aria-labelledby="core-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Core Technology</p>
+          <h2 class="section-title" id="core-title">核心技术</h2>
+          <p class="section-desc">从玻璃基板电镀到活化剂、Via Fill —— ORCHEM 面向下一代 PCB·半导体封装制程的技术。</p>
+        </div>
+
+        <!-- 2-1. TGV -->
+        <article class="tech">
+          <div class="tech__body">
+            <span class="tech__tag">Glass Core · Glass Interposer</span>
+            <h3 class="tech__title">TGV Fill 电镀技术</h3>
+            <p class="tech__products">Zenith-1000 · Zenith-1500</p>
+            <p class="tech__desc">同时开发了以铜填充玻璃基板通孔（TGV）的电解电镀，以及形成玻璃与 ABF 之间结合层的 Adhesion Promotor。赋予电导性的步骤使用我司 E'less 药水。</p>
+            <ul class="check-list">
+              <li>Adhesion Promotor 分子结构自主设计及合成（Multi-Functional Group）</li>
+              <li>热冲击评估（288 ℃，Solder Floating 10 s，10 Cycle）后以 Peel test 测定结合力</li>
+            </ul>
+          </div>
+          <div class="tech__data">
+            <p class="tech__data-title">TGV 电镀流程</p>
+            <ol class="flow" aria-label="TGV 电镀流程">
+              <li>TGV 形成</li><li>Glass-Cu A.P.</li><li>E'less Cu</li><li class="is-key">Electro-Plating</li><li>CMP</li><li class="is-key">Glass-ABF A.P.</li>
+            </ol>
+            <div class="compare">
+              <p class="compare__title">Glass-ABF (GL-102) 平均结合力</p>
+              <div class="compare__row compare__row--orc">
+                <span>ORC A.P.</span><div class="compare__bar"><span style="width:100%"></span></div><strong>400 gf/㎝</strong>
+              </div>
+              <div class="compare__row">
+                <span>市售 A.P.</span><div class="compare__bar"><span style="width:58.75%"></span></div><strong>235 gf/㎝</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2-2. 장 수명 촉매 -->
+        <article class="tech">
+          <div class="tech__body">
+            <span class="tech__tag">Electroless Copper Plating</span>
+            <h3 class="tech__title">长寿命活化剂</h3>
+            <p class="tech__products">ORC-445 series</p>
+            <p class="tech__desc">提高了化学铜活化剂的寿命与槽液稳定性。在 80 ℃ 高温极限条件放置评估中，原有活化剂第2天即产生沉淀，而新活化剂放置30天后仍无异常。</p>
+            <ul class="check-list">
+              <li>长寿命：4周以上稳定使用</li>
+              <li>放置30天后无褪色、无沉淀，粒度无变化</li>
+              <li>采用多重 Ligand，改善离子型 PTH 制程的异物问题</li>
+              <li>可应对 T-Glass · E-Glass 等多种材料的覆盖</li>
+            </ul>
+          </div>
+          <div class="tech__data">
+            <p class="tech__data-title">活化剂产品线</p>
+            <div class="table-scroll">
+              <table class="spec-table">
+                <thead><tr><th scope="col">产品</th><th scope="col">类型</th><th scope="col">作业 Pd 浓度</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">ORC-445R PLUS</th><td>长寿命活化剂</td><td>180 ~ 250 ppm</td></tr>
+                  <tr><th scope="row">ORC-445 ProM</th><td>中浓度活化剂</td><td>120 ~ 180 ppm</td></tr>
+                  <tr><th scope="row">ORC-445 ProMex</th><td>低浓度活化剂</td><td>70 ~ 120 ppm</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2-3. Via Fill -->
+        <article class="tech">
+          <div class="tech__body">
+            <span class="tech__tag">Electrolytic Copper Plating</span>
+            <h3 class="tech__title">Via Fill 电镀技术</h3>
+            <p class="tech__products">Zenith series</p>
+            <p class="tech__desc">在韩国首次研发 PCB Via Fill 产品并供应给韩国客户，拥有一般·图形·高速·脉冲电镀等符合各制程条件的产品线。</p>
+            <ul class="check-list">
+              <li>Through Hole T/P &gt; 90 %, Dimple &lt; 5 ㎛ (Zenith-800)</li>
+              <li>形成 Flat Pattern Shape（Zenith-850）</li>
+              <li>以芳香环高吸附添加剂强化抑制力（Zenith-910）</li>
+              <li>3组分药水，易于控制性能</li>
+            </ul>
+          </div>
+          <div class="tech__data">
+            <p class="tech__data-title">Zenith 产品线</p>
+            <div class="table-scroll">
+              <table class="spec-table">
+                <thead><tr><th scope="col">产品</th><th scope="col">用途</th><th scope="col">特点</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Zenith-800</th><td>一般 Via Fill</td><td>LVH / PTH 同时适用，T/P 90.4 %</td></tr>
+                  <tr><th scope="row">Zenith-850</th><td>图形 Via Fill</td><td>最大化 Pattern 部 Suppressing</td></tr>
+                  <tr><th scope="row">Zenith-910</th><td>高速 Via Fill</td><td>可应对低厚度（8 ㎛~），电镀时间 40 min</td></tr>
+                  <tr><th scope="row">Zenith-1000</th><td>脉冲电镀</td><td>缩短电镀时间 &amp; 单一 Bath，Vacant Free</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- 국산화 스토리 -->
+        <div class="story">
+          <div class="story__step"><strong>98%</strong><span>2004年 · 水平化铜进口产占有</span></div>
+          <div class="story__arrow" aria-hidden="true"></div>
+          <div class="story__step"><strong>自主研发成功</strong><span>2013年 · 离子/胶体钯水平化铜</span></div>
+          <div class="story__arrow" aria-hidden="true"></div>
+          <div class="story__step"><strong>韩国第1位</strong><span>目前 · PCB 化学铜市场</span></div>
+          <p class="story__note">在以前由国外产品主导的市场中，我们利用独家技术成功实现国产化研发。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 개발 이력 -->
+    <section class="section" id="history" aria-labelledby="history-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">R&amp;D History</p>
+          <h2 class="section-title" id="history-title">开发履历</h2>
+        </div>
+        <!-- 가로 타임라인 (오래된 순, 좌우 버튼/스와이프) -->
+        <div class="htl">
+          <div class="htl__nav">
+            <button type="button" class="htl__btn" data-dir="-1" aria-label="上一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="htl__btn" data-dir="1" aria-label="下一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+          <div class="htl__viewport">
+            <ol class="htl__track" tabindex="0" aria-label="开发履历（左右滑动）">
+              <li class="htl__item is-key"><span class="htl__year">2004</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">国产化</span><p>启动水平化铜自主研发项目</p><p class="htl__sub">进口产占有98%</p></div></li>
+              <li class="htl__item is-key"><span class="htl__year">2013</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">国产化</span><p>水平化铜产线自主研发成功</p><p class="htl__sub">离子 / 胶体钯</p></div></li>
+              <li class="htl__item"><span class="htl__year">2015</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">品质改善</span><p>PKG 异物缺陷减少50%</p><p class="htl__sub">成本降低30%</p></div></li>
+              <li class="htl__item"><span class="htl__year">2016</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">新产品</span><p>E'less Cu Plating 活化前处理用 Alkali Pre-dip</p></div></li>
+              <li class="htl__item"><span class="htl__year">2017</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">新产品</span><p>PKG 用 Horizontal E'less Cu Plating</p></div></li>
+              <li class="htl__item"><span class="htl__year">2018</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">新产品</span><p>Hyper Annealed Cu 专用 E'less Cu Plating</p></div></li>
+              <li class="htl__item"><span class="htl__year">2019</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">新产品</span><p>Via Hole Electro Copper Fill Plating</p></div></li>
+              <li class="htl__item"><span class="htl__year">2020</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">新产品</span><p>PKG SAP 制程用 Vertical E'less Cu Plating</p></div></li>
+              <li class="htl__item"><span class="htl__year">2022</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">国产化</span><p>PKG 用 Pattern Fill 国产化</p></div></li>
+              <li class="htl__item"><span class="htl__year">2023</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">新产品</span><p>长寿命活化剂研发</p><p class="htl__sub">4周以上稳定使用</p></div></li>
+              <li class="htl__item is-key"><span class="htl__year">2024</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">国产化</span><p>fcBGA 垂直化学铜自主研发</p>
+                  <p class="htl__sub">建立 D/F 脱膜剂产品线（TMAH Free · ETS 用）<br>高速填孔电镀（内层专用，低电镀厚度）<br>先进的 Via Fill 电镀技术（内外层兼用）</p></div></li>
+              <li class="htl__item"><span class="htl__year">2025</span><span class="htl__dot" aria-hidden="true"></span>
+                <div class="htl__body"><span class="htl__tag">新产品</span><p>脉冲电镀</p><p class="htl__sub">3组分药水，缩短电镀时间<br>S-Free D/F Acid Cleaner</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 로드맵 -->
+    <section class="section section--soft" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">R&amp;D Road Map</p>
+          <h2 class="section-title" id="roadmap-title">通过挑战开创未来的企业</h2>
+        </div>
+        <div class="roadmap">
+          <article class="road">
+            <span class="road__year">2026</span>
+            <div class="road__group"><h3>加强电镀铜产品线</h3><ul><li>Normal / High-Speed / Pattern / Pulse</li></ul></div>
+            <div class="road__group"><h3>新技术的发展与推广</h3><ul><li>各种电镀基材：Interposer / TGV / Glass</li></ul></div>
+            <div class="road__group"><h3>T-Glass &amp; Low Dk/Df 材料兼容</h3><ul><li>确保化学铜</li></ul></div>
+          </article>
+          <article class="road">
+            <span class="road__year">2027</span>
+            <div class="road__group"><h3>Non-Etching Products</h3><ul><li>玻璃电镀 / 层压产品（A·P）/ 脱膜剂</li></ul></div>
+            <div class="road__group"><h3>进军非 PCB 产业</h3><ul><li>TSV Plating</li><li>PSR &amp; Display 用脱膜剂</li></ul></div>
+            <div class="road__group"><h3>ECO Products</h3><ul><li>HCHO Free E'less Plating</li><li>Ni Free E'less Plating</li><li>Non-Amine type 脱膜剂</li></ul></div>
+          </article>
+          <article class="road road--goal">
+            <span class="road__year">2028 ~ 2030</span>
+            <div class="road__group"><h3>进军特种材料行业</h3><ul><li>显示屏，半导体</li></ul></div>
+            <div class="road__group"><h3>专门从事 PCB、显示器和半导体领域材料的公司</h3></div>
+            <div class="road__group"><h3>Beyond the Best</h3><ul><li>我们的挑战和发展将继续。</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 연구 장비 -->
+    <section class="section" id="equipment" aria-labelledby="equipment-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Research Equipment</p>
+          <h2 class="section-title" id="equipment-title">研究器材</h2>
+          <p class="section-desc">从分析到信赖性评估、Pilot Line，拥有各种研发设施和设备。</p>
+        </div>
+        <p class="equip-summary">
+          <span><strong>47台</strong> 设备</span>
+          <span><strong>21</strong> 分析设备</span>
+          <span><strong>17</strong> 信赖性设备</span>
+          <span><strong>9</strong>Pilot Line</span>
+        </p>
+
+        <!-- 연구 장비 아이콘 (선 그림) -->
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+          <defs>
+            <symbol id="eq-sem" viewBox="0 0 48 48"><rect x="18" y="4" width="12" height="20" rx="2"/><path d="M14 24h20l-4 8H18z"/><path d="M24 32v5" stroke-dasharray="2 2"/><path d="M10 41h28"/><path d="M21 9h6M21 14h6"/></symbol>
+            <symbol id="eq-profiler" viewBox="0 0 48 48"><path d="M6 6v36h36"/><path d="M10 30q5-14 10-4t10-6 10 2"/><path d="M10 36q5-8 10-3t10-4 10 1" opacity=".5"/></symbol>
+            <symbol id="eq-ibm" viewBox="0 0 48 48"><path d="M24 4v16" stroke-dasharray="3 3"/><path d="M19 15l5 6 5-6"/><path d="M8 28h12l4 5 4-5h12v12H8z"/></symbol>
+            <symbol id="eq-cvs" viewBox="0 0 48 48"><path d="M6 6v36h36"/><path d="M11 30c6-20 18-20 28-6-8 10-18 12-28 6z"/><circle cx="39" cy="24" r="2"/></symbol>
+            <symbol id="eq-psa" viewBox="0 0 48 48"><circle cx="14" cy="15" r="6"/><circle cx="31" cy="11" r="3"/><circle cx="32" cy="30" r="8"/><circle cx="13" cy="34" r="4"/><circle cx="22" cy="24" r="2"/></symbol>
+            <symbol id="eq-toc" viewBox="0 0 48 48"><path d="M18 5h12M20 5v13L10 39a2 2 0 0 0 2 3h24a2 2 0 0 0 2-3L28 18V5"/><path d="M14 31h20"/><circle cx="21" cy="36" r="1.5"/><circle cx="27" cy="34" r="1.5"/></symbol>
+            <symbol id="eq-angle" viewBox="0 0 48 48"><path d="M4 36h40"/><path d="M12 36a12 12 0 0 1 24 0"/><path d="M12 36l9-11" stroke-dasharray="2 2"/><path d="M17 36a5 5 0 0 0-1.5-4"/></symbol>
+            <symbol id="eq-icp" viewBox="0 0 48 48"><path d="M24 4c7 7 7 13 0 19-7-6-7-12 0-19z"/><rect x="19" y="23" width="10" height="19" rx="2"/><path d="M15 28h18M15 33h18M15 38h18"/></symbol>
+            <symbol id="eq-hplc" viewBox="0 0 48 48"><rect x="6" y="6" width="9" height="34" rx="3"/><path d="M20 40h24"/><path d="M20 40l4-3 3-17 3 17 3-3 3-10 3 10h3"/></symbol>
+            <symbol id="eq-gpc" viewBox="0 0 48 48"><rect x="6" y="6" width="9" height="34" rx="3"/><path d="M20 14l5 6 5-6 5 6 5-6"/><circle cx="20" cy="14" r="1.5"/><circle cx="40" cy="14" r="1.5"/><path d="M22 32l5 5 5-5"/><circle cx="22" cy="32" r="1.5"/><circle cx="32" cy="32" r="1.5"/></symbol>
+            <symbol id="eq-ic" viewBox="0 0 48 48"><circle cx="15" cy="16" r="8"/><path d="M11 16h8"/><circle cx="33" cy="32" r="8"/><path d="M29 32h8M33 28v8"/></symbol>
+            <symbol id="eq-qtof" viewBox="0 0 48 48"><path d="M6 42h36"/><path d="M11 42V32M17 42V18M23 42V30M29 42V10M35 42V34"/></symbol>
+            <symbol id="eq-ftir" viewBox="0 0 48 48"><path d="M6 6v36h36"/><path d="M8 12h7l3 18 3-18h6l3 12 3-12h9"/></symbol>
+            <symbol id="eq-gcms" viewBox="0 0 48 48"><circle cx="15" cy="24" r="10"/><circle cx="15" cy="24" r="5"/><path d="M26 24h6M30 21l3 3-3 3"/><path d="M36 34V22M40 34V14M44 34V26"/></symbol>
+          </defs>
+        </svg>
+        <ul class="equip-grid">
+          <li class="equip"><div class="equip__head"><h3>FE-SEM</h3><span class="equip__qty">2台</span></div><p class="equip__en">Field Emission Scanning Electron Microscope</p><ul><li>PCB 产品信赖性分析</li><li>不良细微形状 &amp; 成份分析</li><li>薄膜观察及厚度测量</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-sem"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>3D Profiler</h3></div><p class="equip__name">3D 非接触式照度计</p><p class="equip__en">3D Optical Surface Profiler</p><ul><li>表面 Roughness 分析</li><li>3D 立体形状观察</li><li>粗糙 Parameter 测量</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-profiler"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>IBM</h3><span class="equip__qty">2台</span></div><p class="equip__en">Ion Beam Milling</p><ul><li>表面 &amp; 断面精密加工</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-ibm"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>CVS</h3><span class="equip__qty">6台</span></div><p class="equip__en">Cyclic Voltammetric Stripping</p><ul><li>电解镀膜添加剂分析（增亮剂、携带剂、平衡剂）</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-cvs"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>PSA</h3></div><p class="equip__name">粒度分析仪</p><p class="equip__en">Particle Size Analyzer</p><ul><li>液体样品的分散度测量</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-psa"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>TOC &amp; TN</h3></div><p class="equip__en">Total Organic Carbon &amp; Nitrogen Analyzer</p><ul><li>无机 &amp; 有机碳测量</li><li>通过监测碳含量测量药品的老化程度</li><li>药品内总氮分析</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-toc"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>Contact Angle</h3></div><p class="equip__name">接触角测量仪</p><p class="equip__en">Contact Angle Meter</p><ul><li>液体样品的物理特性（润湿性）分析</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-angle"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>ICP</h3></div><p class="equip__en">Inductively Coupled Plasma</p><ul><li>药品中金属成分分析</li><li>阳离子杂质分析</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-icp"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>HPLC</h3></div><p class="equip__en">Liquid Chromatography</p><ul><li>添加剂成分分离分析（有机单体、表面活性剂等）</li><li>现场液体质量的精密验证与特性分析</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-hplc"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>GPC &amp; GFC</h3></div><p class="equip__en">Gel Permeation &amp; Filtration Chromatography</p><ul><li>水溶性 &amp; 脂溶性高分子添加剂分析</li><li>原材料间分子量/分布的精密比较分析</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-gpc"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>IC</h3></div><p class="equip__en">Ion Chromatography</p><ul><li>阴离子（Cl 及其他5种）分析</li><li>药品中有机酸分析</li><li>电镀液中阴离子副产物分析</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-ic"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>HPLC-QTOF</h3></div><p class="equip__en">High Pressure Liquid Chromatography QTOF</p><ul><li>微量有机添加剂分析</li><li>未知成分结构预测</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-qtof"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>FT-IR Microscope</h3></div><p class="equip__en">Fourier Transform Infrared Microscope</p><ul><li>药品/材料成分及功能团特性分析（按成分持有 D/B）</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-ftir"/></svg></li>
+          <li class="equip"><div class="equip__head"><h3>HS &amp; GC-MS</h3></div><p class="equip__en">Headspace &amp; Gas Chromatography MS</p><ul><li>电镀液有机添加剂分析</li><li>挥发/半挥发成分分析</li><li>原材料中有机杂质分析</li></ul><svg class="equip__icon" aria-hidden="true"><use href="#eq-gcms"/></svg></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. 문의 -->
+    <section class="section" style="padding-top:0" aria-labelledby="tech-cta-title">
+      <div class="container">
+        <div class="tech-cta">
+          <div>
+            <h2 id="tech-cta-title">需要针对您制程的技术咨询吗？</h2>
+            <p>请告诉我们您的制程和规格，我们的负责人将为您解答。</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">技术咨询</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="footer-brand">
+          <img src="../assets/images/logo-white.png" alt="ORCHEM" width="146" height="30" loading="lazy">
+          <p class="footer-brand__slogan">Beyond the Best! Total Chemical Solution Company!</p>
+        </div>
+
+        <div>
+          <h2 class="footer-title">(株) ORCHEM</h2>
+          <dl class="footer-info">
+            <dt>法人代表</dt><dd>李在贤</dd>
+            <dt>总部</dt><dd>韩国 京畿道 安山市 檀园区 始华风险路 705</dd>
+            <dt>总机</dt><dd><a href="tel:+82-31-488-0600">+82-31-488-0600</a></dd>
+            <dt>传真</dt><dd>+82-31-488-0660</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2 class="footer-title">事业场</h2>
+          <ul class="footer-sites">
+            <li><strong>韩国</strong>安山总部（中央研究所）· 龟尾工厂</li>
+            <li><strong>中国</strong>深圳物流办事处 · 浙江省嘉兴新工厂 &amp; 信赖性中心</li>
+            <li><strong>越南</strong>越南法人（药水·电镀工厂，第2研究所）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <ul class="footer-links">
+          <!-- TODO: 개인정보처리방침 페이지 제작 후 링크 연결 -->
+          <li><a href="contact.html">客户咨询</a></li>
+          <li><a href="https://orchem.com/chn/main.php" target="_blank" rel="noopener">企业官网</a></li>
+        </ul>
+        <div class="footer-sns">
+          <a href="https://www.linkedin.com/company/orchem9191/" target="_blank" rel="noopener" aria-label="ORCHEM LinkedIn（新窗口）">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.6-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11z"/></svg>
+          </a>
+          <a href="https://blog.naver.com/orchem01" target="_blank" rel="noopener" aria-label="ORCHEM Naver 博客（新窗口）">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4.6l4.9 7.1V4H19v16h-4.6l-4.9-7.1V20H5z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">Copyright &copy; <span data-year>2026</span> ORCHEM Co.,Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="返回顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../js/common.js" defer></script>
+</body>
+</html>

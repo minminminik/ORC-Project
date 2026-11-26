@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 제품 상세 템플릿: product.html?id=<카테고리 id> (데이터: js/products-data.js) -->
+  <title>제품 상세 | 오알켐 ORCHEM</title>
+  <meta name="description" content="오알켐 제품 상세 정보">
+  <meta name="theme-color" content="#00626F">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body data-page="product">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="오알켐 홈">
+        <img src="assets/images/logo-color.png" alt="ORCHEM 오알켐" width="146" height="30">
+      </a>
+
+      <nav class="gnb" id="gnb" aria-label="주 메뉴">
+        <ul class="gnb__list">
+          <li><a class="gnb__link" href="about.html">회사소개</a></li>
+          <li><a class="gnb__link" href="technology.html">기술·R&amp;D</a></li>
+          <li><a class="gnb__link" href="products.html" aria-current="page">제품</a></li>
+          <li><a class="gnb__link" href="contact.html">문의</a></li>
+        </ul>
+        <div class="gnb__mobile-extra">
+          <a class="btn btn--primary" href="contact.html">제품 문의하기</a>
+          <div class="lang" aria-label="언어 선택">
+            <a href="product.html" aria-current="true" lang="ko">KOR</a>
+            <a href="en/product.html" lang="en">ENG</a>
+            <a href="cn/product.html" lang="zh">CHN</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-util">
+        <div class="lang" aria-label="언어 선택">
+          <a href="product.html" aria-current="true" lang="ko">KOR</a>
+          <a href="en/product.html" lang="en">ENG</a>
+          <a href="cn/product.html" lang="zh">CHN</a>
+        </div>
+        <a class="btn btn--primary header-cta" href="contact.html">제품 문의</a>
+        <button class="menu-toggle" type="button" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main">
+    <div id="detail">
+      <noscript><section class="section"><div class="container"><p>제품 정보를 보려면 JavaScript를 켜 주세요. <a href="products.html">제품 목록</a></p></div></section></noscript>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="footer-brand">
+          <img src="assets/images/logo-white.png" alt="ORCHEM 오알켐" width="146" height="30" loading="lazy">
+          <p class="footer-brand__slogan">Beyond the Best! Total Chemical Solution Company!</p>
+        </div>
+
+        <div>
+          <h2 class="footer-title">(주)오알켐</h2>
+          <dl class="footer-info">
+            <dt>대표이사</dt><dd>이재현</dd>
+            <dt>본사</dt><dd>경기도 안산시 단원구 시화벤처로 705</dd>
+            <dt>대표번호</dt><dd><a href="tel:031-488-0600">031-488-0600</a></dd>
+            <dt>팩스</dt><dd>031-488-0660</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2 class="footer-title">사업장</h2>
+          <ul class="footer-sites">
+            <li><strong>한국</strong>안산 본사 (중앙연구소) · 구미 공장</li>
+            <li><strong>중국</strong>심천 물류사무소 · 절강성 가흥 신공장 &amp; 신뢰성 센터</li>
+            <li><strong>베트남</strong>베트남 법인 (약품·도금 공장, 제2연구소)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <ul class="footer-links">
+          <!-- TODO: 개인정보처리방침 페이지 제작 후 링크 연결 -->
+          <li><a href="contact.html">고객문의</a></li>
+          <li><a href="https://orchem.com/home/main.php" target="_blank" rel="noopener">기업 홈페이지</a></li>
+        </ul>
+        <div class="footer-sns">
+          <a href="https://www.linkedin.com/company/orchem9191/" target="_blank" rel="noopener" aria-label="오알켐 LinkedIn (새 창)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.6-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11z"/></svg>
+          </a>
+          <a href="https://blog.naver.com/orchem01" target="_blank" rel="noopener" aria-label="오알켐 네이버 블로그 (새 창)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4.6l4.9 7.1V4H19v16h-4.6l-4.9-7.1V20H5z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">Copyright &copy; <span data-year>2026</span> ORCHEM Co.,Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="맨 위로 가기">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/common.js" defer></script>
+  <script src="js/products-data.js" defer></script>
+  <script src="js/products.js" defer></script>
+</body>
+</html>

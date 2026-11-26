@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오알켐 홈페이지 미리보기</title>
+  <link rel="icon" href="../assets/images/logo-color.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <style>
+    :root {
+      --mint: #1EB5BC; --jade: #00626F; --jade-dark: #004952;
+      --bar: #10282C; --bar-line: rgba(255,255,255,.1); --stage: #5B6B6E;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      display: flex; flex-direction: column;
+      font-family: "Pretendard Variable", Pretendard, "Malgun Gothic", sans-serif;
+      background: var(--stage); color: #fff; overflow: hidden;
+    }
+    .bar {
+      flex-shrink: 0; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      padding: 10px 16px; background: var(--bar); border-bottom: 1px solid var(--bar-line);
+      font-size: 14px;
+    }
+    .bar__brand { display: flex; align-items: center; gap: 10px; font-weight: 700; margin-right: 8px; }
+    .bar__brand img { height: 18px; filter: brightness(0) invert(1); }
+    .group { display: flex; align-items: center; gap: 4px; padding: 3px; background: rgba(255,255,255,.06); border-radius: 8px; }
+    .group button, .tool {
+      font: inherit; color: rgba(255,255,255,.75); background: none; border: 0; cursor: pointer;
+      padding: 6px 12px; border-radius: 6px; white-space: nowrap;
+    }
+    .group button:hover, .tool:hover { color: #fff; background: rgba(255,255,255,.08); }
+    .group button[aria-pressed="true"] { background: var(--mint); color: #fff; }
+    .group button:disabled { opacity: .35; cursor: not-allowed; background: none; }
+    .spacer { flex: 1; }
+    .size { color: rgba(255,255,255,.5); font-variant-numeric: tabular-nums; min-width: 92px; text-align: right; }
+    .stage { flex: 1; overflow: auto; display: flex; justify-content: center; padding: 0; }
+    .stage.is-device { padding: 24px; }
+    .frame-wrap {
+      width: 100%; height: 100%; background: #fff; transition: width .25s ease;
+    }
+    .stage.is-device .frame-wrap {
+      border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      height: auto; min-height: 100%;
+    }
+    iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .stage.is-device iframe { height: calc(100vh - 110px); }
+    .nav-btn { display: inline-flex; align-items: center; justify-content: center; padding: 6px 10px !important; }
+    .nav-btn svg { width: 18px; height: 18px; }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <div class="bar__brand"><img src="../assets/images/logo-color.png" alt="">미리보기</div>
+
+    <div class="group" aria-label="이동">
+      <button type="button" class="nav-btn" id="nav-back" title="뒤로 (Alt + ←)" aria-label="뒤로 가기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button type="button" class="nav-btn" id="nav-forward" title="앞으로 (Alt + →)" aria-label="앞으로 가기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div class="group" id="langs" aria-label="언어">
+      <button type="button" data-lang="">KOR</button>
+      <button type="button" data-lang="en/">ENG</button>
+      <button type="button" data-lang="cn/">CHN</button>
+    </div>
+
+    <div class="group" id="pages" aria-label="페이지"></div>
+
+    <div class="spacer"></div>
+
+    <div class="group" id="devices" aria-label="화면 크기">
+      <button type="button" data-w="0">PC</button>
+      <button type="button" data-w="820">태블릿</button>
+      <button type="button" data-w="375">모바일</button>
+    </div>
+    <span class="size" id="size"></span>
+    <button class="tool" type="button" id="reload" title="새로고침 (F5)">↻ 새로고침</button>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="frame-wrap" id="wrap">
+      <iframe id="frame" title="홈페이지 미리보기"></iframe>
+    </div>
+  </div>
+
+  <script>
+    /* 페이지 목록: 새 페이지를 만들면 ready: true 로 바꿉니다 */
+    var PAGES = [
+      { file: 'index.html',      name: '홈',        ready: true },
+      { file: 'about.html',      name: '회사소개',  ready: true },
+      { file: 'technology.html', name: '기술·R&D',  ready: true },
+      { file: 'products.html',   name: '제품',      ready: true },
+      { file: 'contact.html',    name: '문의',      ready: true }
+    ];
+
+    var frame = document.getElementById('frame');
+    var wrap = document.getElementById('wrap');
+    var stage = document.getElementById('stage');
+    var sizeEl = document.getElementById('size');
+    var pagesEl = document.getElementById('pages');
+    var devBtns = document.querySelectorAll('#devices button');
+
+    function load(key, fallback) { try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; } }
+    function save(key, val) { try { localStorage.setItem(key, val); } catch (e) {} }
+
+    var state = { page: load('pv-page', 'index.html'), w: Number(load('pv-w', '0')), lang: ['en/', 'cn/'].indexOf(load('pv-lang', '')) > -1 ? load('pv-lang', '') : '' };
+    var langBtns = document.querySelectorAll('#langs button');
+    function setLang(l) {
+      state.lang = l; save('pv-lang', l || 'ko');
+      langBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === l)); });
+      setPage(state.page);
+    }
+    langBtns.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+
+    PAGES.forEach(function (p) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = p.name;
+      b.dataset.file = p.file;
+      if (!p.ready) { b.disabled = true; b.title = '아직 제작 전입니다'; }
+      b.addEventListener('click', function () { setPage(p.file); });
+      pagesEl.appendChild(b);
+    });
+
+    function setPage(file) {
+      state.page = file; save('pv-page', file);
+      frame.src = '../' + state.lang + file;
+      pagesEl.querySelectorAll('button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.file === file));
+      });
+    }
+
+    function setDevice(w) {
+      state.w = w; save('pv-w', String(w));
+      stage.classList.toggle('is-device', w > 0);
+      wrap.style.width = w > 0 ? w + 'px' : '100%';
+      devBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(Number(b.dataset.w) === w)); });
+      updateSize();
+    }
+
+    function updateSize() {
+      var w = state.w > 0 ? state.w : wrap.clientWidth;
+      sizeEl.textContent = w + ' px';
+    }
+
+    devBtns.forEach(function (b) {
+      b.addEventListener('click', function () { setDevice(Number(b.dataset.w)); });
+    });
+    document.getElementById('reload').addEventListener('click', function () {
+      try { frame.contentWindow.location.reload(); }
+      catch (e) { frame.src = frame.src; } /* file:// 보안 제한 시 대체 */
+    });
+    window.addEventListener('resize', updateSize);
+
+    /* 뒤로 / 앞으로: 창 전체 기록에 미리보기 안의 페이지 이동이 함께 쌓이므로 창 기록을 이동 */
+    document.getElementById('nav-back').addEventListener('click', function () { history.back(); });
+    document.getElementById('nav-forward').addEventListener('click', function () { history.forward(); });
+
+    /* iframe 안에서 링크로 이동하면 상단 탭도 맞춰줌 */
+    frame.addEventListener('load', function () {
+      try {
+        var file = frame.contentWindow.location.pathname.split('/').pop();
+        if (file === 'product.html') file = 'products.html'; /* 상세 → 제품 탭 */
+        pagesEl.querySelectorAll('button').forEach(function (b) {
+          b.setAttribute('aria-pressed', String(b.dataset.file === file));
+        });
+      } catch (e) {}
+    });
+
+    var known = PAGES.some(function (p) { return p.file === state.page && p.ready; });
+    state.page = known ? state.page : 'index.html';
+    setLang(state.lang);
+    setDevice([0, 820, 375].indexOf(state.w) > -1 ? state.w : 0);
+  </script>
+</body>
+</html>

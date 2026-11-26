@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 제품 상세 템플릿: product.html?id=<카테고리 id> (데이터: js/products-data.js) -->
+  <title>产品详情 | ORCHEM</title>
+  <meta name="description" content="ORCHEM 产品详情">
+  <meta name="theme-color" content="#00626F">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+<body data-page="product" data-base="../">
+  <a class="skip-link" href="#main">跳至正文</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="ORCHEM 首页">
+        <img src="../assets/images/logo-color.png" alt="ORCHEM" width="146" height="30">
+      </a>
+
+      <nav class="gnb" id="gnb" aria-label="主菜单">
+        <ul class="gnb__list">
+          <li><a class="gnb__link" href="about.html">公司介绍</a></li>
+          <li><a class="gnb__link" href="technology.html">技术·研发</a></li>
+          <li><a class="gnb__link" href="products.html" aria-current="page">产品</a></li>
+          <li><a class="gnb__link" href="contact.html">咨询</a></li>
+        </ul>
+        <div class="gnb__mobile-extra">
+          <a class="btn btn--primary" href="contact.html">产品咨询</a>
+          <div class="lang" aria-label="选择语言">
+            <a href="../product.html" lang="ko">KOR</a>
+            <a href="../en/product.html" lang="en">ENG</a>
+            <a href="product.html" aria-current="true" lang="zh">CHN</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-util">
+        <div class="lang" aria-label="选择语言">
+          <a href="../product.html" lang="ko">KOR</a>
+          <a href="../en/product.html" lang="en">ENG</a>
+          <a href="product.html" aria-current="true" lang="zh">CHN</a>
+        </div>
+        <a class="btn btn--primary header-cta" href="contact.html">产品咨询</a>
+        <button class="menu-toggle" type="button" aria-controls="gnb" aria-expanded="false" aria-label="打开菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main">
+    <div id="detail">
+      <noscript><section class="section"><div class="container"><p>请启用 JavaScript 以查看产品信息。<a href="products.html">产品列表</a></p></div></section></noscript>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="footer-brand">
+          <img src="../assets/images/logo-white.png" alt="ORCHEM" width="146" height="30" loading="lazy">
+          <p class="footer-brand__slogan">Beyond the Best! Total Chemical Solution Company!</p>
+        </div>
+
+        <div>
+          <h2 class="footer-title">(株) ORCHEM</h2>
+          <dl class="footer-info">
+            <dt>法人代表</dt><dd>李在贤</dd>
+            <dt>总部</dt><dd>韩国 京畿道 安山市 檀园区 始华风险路 705</dd>
+            <dt>总机</dt><dd><a href="tel:+82-31-488-0600">+82-31-488-0600</a></dd>
+            <dt>传真</dt><dd>+82-31-488-0660</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2 class="footer-title">事业场</h2>
+          <ul class="footer-sites">
+            <li><strong>韩国</strong>安山总部（中央研究所）· 龟尾工厂</li>
+            <li><strong>中国</strong>深圳物流办事处 · 浙江省嘉兴新工厂 &amp; 信赖性中心</li>
+            <li><strong>越南</strong>越南法人（药水·电镀工厂，第2研究所）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <ul class="footer-links">
+          <!-- TODO: 개인정보처리방침 페이지 제작 후 링크 연결 -->
+          <li><a href="contact.html">客户咨询</a></li>
+          <li><a href="https://orchem.com/chn/main.php" target="_blank" rel="noopener">企业官网</a></li>
+        </ul>
+        <div class="footer-sns">
+          <a href="https://www.linkedin.com/company/orchem9191/" target="_blank" rel="noopener" aria-label="ORCHEM LinkedIn（新窗口）">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.6-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11z"/></svg>
+          </a>
+          <a href="https://blog.naver.com/orchem01" target="_blank" rel="noopener" aria-label="ORCHEM Naver 博客（新窗口）">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4.6l4.9 7.1V4H19v16h-4.6l-4.9-7.1V20H5z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">Copyright &copy; <span data-year>2026</span> ORCHEM Co.,Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="返回顶部">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/products-data-cn.js" defer></script>
+  <script src="../js/products.js" defer></script>
+</body>
+</html>

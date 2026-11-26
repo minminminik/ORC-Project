@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 제품 상세 템플릿: product.html?id=<카테고리 id> (데이터: js/products-data.js) -->
+  <title>Product Details | ORCHEM</title>
+  <meta name="description" content="ORCHEM product details">
+  <meta name="theme-color" content="#00626F">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+<body data-page="product" data-base="../">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="ORCHEM Home">
+        <img src="../assets/images/logo-color.png" alt="ORCHEM" width="146" height="30">
+      </a>
+
+      <nav class="gnb" id="gnb" aria-label="Main menu">
+        <ul class="gnb__list">
+          <li><a class="gnb__link" href="about.html">About Us</a></li>
+          <li><a class="gnb__link" href="technology.html">Technology·R&amp;D</a></li>
+          <li><a class="gnb__link" href="products.html" aria-current="page">Products</a></li>
+          <li><a class="gnb__link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="gnb__mobile-extra">
+          <a class="btn btn--primary" href="contact.html">Product Inquiry</a>
+          <div class="lang" aria-label="Language">
+            <a href="../product.html" lang="ko">KOR</a>
+            <a href="product.html" aria-current="true" lang="en">ENG</a>
+            <a href="../cn/product.html" lang="zh">CHN</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-util">
+        <div class="lang" aria-label="Language">
+          <a href="../product.html" lang="ko">KOR</a>
+          <a href="product.html" aria-current="true" lang="en">ENG</a>
+          <a href="../cn/product.html" lang="zh">CHN</a>
+        </div>
+        <a class="btn btn--primary header-cta" href="contact.html">Inquiry</a>
+        <button class="menu-toggle" type="button" aria-controls="gnb" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main">
+    <div id="detail">
+      <noscript><section class="section"><div class="container"><p>Please enable JavaScript to view product information. <a href="products.html">Product list</a></p></div></section></noscript>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="footer-brand">
+          <img src="../assets/images/logo-white.png" alt="ORCHEM" width="146" height="30" loading="lazy">
+          <p class="footer-brand__slogan">Beyond the Best! Total Chemical Solution Company!</p>
+        </div>
+
+        <div>
+          <h2 class="footer-title">ORCHEM Co., Ltd.</h2>
+          <dl class="footer-info">
+            <dt>CEO</dt><dd>Jaehyun Lee</dd>
+            <dt>Headquarters</dt><dd>705, Sihwa Venture-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Republic of Korea</dd>
+            <dt>Main Phone</dt><dd><a href="tel:+82-31-488-0600">+82-31-488-0600</a></dd>
+            <dt>Fax</dt><dd>+82-31-488-0660</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2 class="footer-title">Locations</h2>
+          <ul class="footer-sites">
+            <li><strong>Korea</strong>Ansan Headquarters (Main Lab) · Gumi Plant</li>
+            <li><strong>China</strong>Shenzhen Logistics Office · New Plant &amp; Reliability Center in Jiaxing, Zhejiang</li>
+            <li><strong>Vietnam</strong>Vietnam Corporation (Chemical and Plating Plant, 2nd Lab)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <ul class="footer-links">
+          <!-- TODO: 개인정보처리방침 페이지 제작 후 링크 연결 -->
+          <li><a href="contact.html">Customer Support</a></li>
+          <li><a href="https://orchem.com/eng/main.php" target="_blank" rel="noopener">Corporate Website</a></li>
+        </ul>
+        <div class="footer-sns">
+          <a href="https://www.linkedin.com/company/orchem9191/" target="_blank" rel="noopener" aria-label="ORCHEM on LinkedIn (new window)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.6-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11z"/></svg>
+          </a>
+          <a href="https://blog.naver.com/orchem01" target="_blank" rel="noopener" aria-label="ORCHEM Naver Blog (new window)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4.6l4.9 7.1V4H19v16h-4.6l-4.9-7.1V20H5z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">Copyright &copy; <span data-year>2026</span> ORCHEM Co.,Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../js/common.js" defer></script>
+  <script src="../js/products-data-en.js" defer></script>
+  <script src="../js/products.js" defer></script>
+</body>
+</html>

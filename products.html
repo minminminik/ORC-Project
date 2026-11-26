@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>제품 | 오알켐 ORCHEM</title>
+  <meta name="description" content="오알켐 제품 라인업 — 무전해 화학동도금(ORC-400), 전기동도금(ORC-800·Zenith), DFR 박리제(ORC-700·Vacuus), 적층(Oxide·LOMACS), Etchant &amp; Cleaner.">
+  <meta name="theme-color" content="#00626F">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body data-page="products">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="index.html" aria-label="오알켐 홈">
+        <img src="assets/images/logo-color.png" alt="ORCHEM 오알켐" width="146" height="30">
+      </a>
+
+      <nav class="gnb" id="gnb" aria-label="주 메뉴">
+        <ul class="gnb__list">
+          <li><a class="gnb__link" href="about.html">회사소개</a></li>
+          <li><a class="gnb__link" href="technology.html">기술·R&amp;D</a></li>
+          <li><a class="gnb__link" href="products.html" aria-current="page">제품</a></li>
+          <li><a class="gnb__link" href="contact.html">문의</a></li>
+        </ul>
+        <div class="gnb__mobile-extra">
+          <a class="btn btn--primary" href="contact.html">제품 문의하기</a>
+          <div class="lang" aria-label="언어 선택">
+            <a href="products.html" aria-current="true" lang="ko">KOR</a>
+            <a href="en/products.html" lang="en">ENG</a>
+            <a href="cn/products.html" lang="zh">CHN</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-util">
+        <div class="lang" aria-label="언어 선택">
+          <a href="products.html" aria-current="true" lang="ko">KOR</a>
+          <a href="en/products.html" lang="en">ENG</a>
+          <a href="cn/products.html" lang="zh">CHN</a>
+        </div>
+        <a class="btn btn--primary header-cta" href="contact.html">제품 문의</a>
+        <button class="menu-toggle" type="button" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <!-- 제품 목록은 js/products-data.js 데이터로 그려집니다 -->
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <div>
+          <ol class="breadcrumb" aria-label="현재 위치">
+            <li><a href="index.html">홈</a></li>
+            <li aria-current="page">제품</li>
+          </ol>
+          <h1>제품</h1>
+          <p>PCB 제조 공정에 사용되는 130여 종의 화학소재를 직접 개발·공급합니다.</p>
+        </div>
+        <!-- 우측 그래픽: 공정별 약품 → PCB -->
+        <figure class="page-hero__media" aria-hidden="true">
+          <svg class="hero-art" viewBox="0 0 440 275" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="prDots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="1" fill="rgba(255,255,255,.1)"/></pattern>
+              <linearGradient id="prLiq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1EB5BC" stop-opacity=".75"/><stop offset="1" stop-color="#00626F" stop-opacity=".55"/></linearGradient>
+            </defs>
+            <rect width="440" height="275" fill="url(#prDots)"/>
+            <!-- 약품병 5개 (공정 순서) -->
+            <g>
+              <text class="ts" x="70" y="72" text-anchor="middle">적층</text>
+              <rect x="61" y="80" width="18" height="10" rx="2" fill="#1EB5BC"/><rect x="63" y="90" width="14" height="10" class="ln"/>
+              <rect x="48" y="132" width="44" height="66" rx="8" fill="url(#prLiq)" opacity=".9"/><rect x="48" y="100" width="44" height="98" rx="8" fill="rgba(30,181,188,.08)" class="ln-mint"/>
+            </g>
+            <g>
+              <text class="ts" x="145" y="72" text-anchor="middle">화학동</text>
+              <rect x="136" y="80" width="18" height="10" rx="2" fill="#1EB5BC"/><rect x="138" y="90" width="14" height="10" class="ln"/>
+              <rect x="123" y="118" width="44" height="80" rx="8" fill="url(#prLiq)" opacity=".9"/><rect x="123" y="100" width="44" height="98" rx="8" fill="rgba(30,181,188,.08)" class="ln-mint"/>
+            </g>
+            <g>
+              <text class="ts" x="220" y="72" text-anchor="middle">전기동</text>
+              <rect x="211" y="80" width="18" height="10" rx="2" fill="#1EB5BC"/><rect x="213" y="90" width="14" height="10" class="ln"/>
+              <rect x="198" y="126" width="44" height="72" rx="8" fill="url(#prLiq)" opacity=".9"/><rect x="198" y="100" width="44" height="98" rx="8" fill="rgba(30,181,188,.08)" class="ln-mint"/>
+            </g>
+            <g>
+              <text class="ts" x="295" y="72" text-anchor="middle">D/F 전처리</text>
+              <rect x="286" y="80" width="18" height="10" rx="2" fill="#1EB5BC"/><rect x="288" y="90" width="14" height="10" class="ln"/>
+              <rect x="273" y="142" width="44" height="56" rx="8" fill="url(#prLiq)" opacity=".9"/><rect x="273" y="100" width="44" height="98" rx="8" fill="rgba(30,181,188,.08)" class="ln-mint"/>
+            </g>
+            <g>
+              <text class="ts" x="370" y="72" text-anchor="middle">D/F 박리</text>
+              <rect x="361" y="80" width="18" height="10" rx="2" fill="#1EB5BC"/><rect x="363" y="90" width="14" height="10" class="ln"/>
+              <rect x="348" y="122" width="44" height="76" rx="8" fill="url(#prLiq)" opacity=".9"/><rect x="348" y="100" width="44" height="98" rx="8" fill="rgba(30,181,188,.08)" class="ln-mint"/>
+            </g>
+            <!-- 흐름 -->
+            <path class="flow" d="M70 200 V230"/><path class="flow" d="M145 200 V230" style="animation-delay:.3s"/><path class="flow" d="M220 200 V230" style="animation-delay:.6s"/>
+            <path class="flow" d="M295 200 V230" style="animation-delay:.9s"/><path class="flow" d="M370 200 V230" style="animation-delay:1.2s"/>
+            <!-- PCB -->
+            <rect x="36" y="232" width="368" height="22" rx="4" fill="rgba(255,255,255,.12)" class="ln"/>
+            <g fill="#1EB5BC"><rect x="67" y="232" width="6" height="22"/><rect x="142" y="232" width="6" height="22"/><rect x="217" y="232" width="6" height="22"/><rect x="292" y="232" width="6" height="22"/><rect x="367" y="232" width="6" height="22"/></g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 공정별 서브 메뉴 (회사소개·기술 페이지 서브 메뉴와 같은 디자인, 동작: js/products.js) -->
+    <nav class="subnav subnav--filter" aria-label="공정별 제품">
+      <div class="container">
+        <ul id="process"></ul>
+      </div>
+    </nav>
+
+    <div class="toolbar toolbar--under-subnav" id="list-top">
+      <div class="container toolbar__inner">
+        <div class="toolbar__status">
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+        <label class="search">
+          <span class="sr-only">제품명 검색</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="search" placeholder="제품명·특징 검색 (예: ORC-464, TMAH)" autocomplete="off">
+        </label>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top:clamp(32px,4vw,48px)" aria-label="제품 목록">
+      <div class="container" id="product-list">
+        <noscript><p class="empty">제품 목록을 보려면 JavaScript를 켜 주세요.</p></noscript>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="footer-brand">
+          <img src="assets/images/logo-white.png" alt="ORCHEM 오알켐" width="146" height="30" loading="lazy">
+          <p class="footer-brand__slogan">Beyond the Best! Total Chemical Solution Company!</p>
+        </div>
+
+        <div>
+          <h2 class="footer-title">(주)오알켐</h2>
+          <dl class="footer-info">
+            <dt>대표이사</dt><dd>이재현</dd>
+            <dt>본사</dt><dd>경기도 안산시 단원구 시화벤처로 705</dd>
+            <dt>대표번호</dt><dd><a href="tel:031-488-0600">031-488-0600</a></dd>
+            <dt>팩스</dt><dd>031-488-0660</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2 class="footer-title">사업장</h2>
+          <ul class="footer-sites">
+            <li><strong>한국</strong>안산 본사 (중앙연구소) · 구미 공장</li>
+            <li><strong>중국</strong>심천 물류사무소 · 절강성 가흥 신공장 &amp; 신뢰성 센터</li>
+            <li><strong>베트남</strong>베트남 법인 (약품·도금 공장, 제2연구소)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <ul class="footer-links">
+          <!-- TODO: 개인정보처리방침 페이지 제작 후 링크 연결 -->
+          <li><a href="contact.html">고객문의</a></li>
+          <li><a href="https://orchem.com/home/main.php" target="_blank" rel="noopener">기업 홈페이지</a></li>
+        </ul>
+        <div class="footer-sns">
+          <a href="https://www.linkedin.com/company/orchem9191/" target="_blank" rel="noopener" aria-label="오알켐 LinkedIn (새 창)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.6-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4v-11z"/></svg>
+          </a>
+          <a href="https://blog.naver.com/orchem01" target="_blank" rel="noopener" aria-label="오알켐 네이버 블로그 (새 창)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4.6l4.9 7.1V4H19v16h-4.6l-4.9-7.1V20H5z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">Copyright &copy; <span data-year>2026</span> ORCHEM Co.,Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="맨 위로 가기">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/common.js" defer></script>
+  <script src="js/products-data.js" defer></script>
+  <script src="js/products.js" defer></script>
+</body>
+</html>
