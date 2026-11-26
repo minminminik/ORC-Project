@@ -421,9 +421,9 @@ a[href^="tel:"]:not(.btn):not(.tel) { display: inline-block; padding: 10px 0; ma
 .brand-drop { display: inline-block; width: .5em; height: .5em; border-radius: var(--drop); background: var(--mint); }
 
 /* 서브페이지 큰 제목 오른쪽 위 물방울 */
-.page-hero h1 { position: relative; display: inline-block; padding-right: .42em; }
+.page-hero h1 { position: relative; display: table; padding-right: .6em; } /* table: 글자 폭만큼만 차지하되 항상 새 줄 */
 .page-hero h1::after {
-  content: ""; position: absolute; right: 0; top: .08em;
+  content: ""; position: absolute; right: .05em; top: 0;
   width: .3em; height: .3em; border-radius: var(--drop); background: var(--mint);
 }
 /* 섹션 영문 제목 앞 작은 물방울 */

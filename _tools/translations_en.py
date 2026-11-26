@@ -69,7 +69,6 @@ T = {
 "통신설비": "Telecommunications",
 "반도체": "Semiconductor",
 "디스플레이": "Display",
-"오알켐 제품 적용 부위": "Where ORCHEM products are applied",
 "적층": "Lamination",
 "전기동도금": "Electro Cu Plating",
 "무전해 화학동도금": "E'less Cu Plating",
